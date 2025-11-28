@@ -7,6 +7,7 @@
     <title>Dialer Script - Tailwind</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assest/css/dev-style.css">
 
     <style>
         .sidebar-closed {
@@ -305,7 +306,307 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="overflow-hidden items-start gap-6 px-6">
+                <div class="flex-shrink-0">
+
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <h2 class="text-2xl font-bold mb-1">Quick Actions</h2>
+                            <p class="text-gray-500 text-sm">Use these shortcuts for common tasks</p>
+                        </div>
+                        <div class="gap-2 flex">
+                            <button class="swiper-button-prev bg-white p-2 rounded-full shadow hover:bg-gray-100">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.59753 11.1422C5.99353 10.5004 5.99353 9.4994 6.59753 8.85765L12.7267 2.34545C13.0421 2.01031 13.5695 1.99432 13.9046 2.30975C14.2398 2.62518 14.2558 3.15258 13.9403 3.48772L7.8112 9.99992L13.9403 16.5121C14.2558 16.8473 14.2398 17.3747 13.9046 17.6901C13.5695 18.0055 13.0421 17.9895 12.7267 17.6544L6.59753 11.1422Z"
+                                        fill="#000000" />
+                                </svg>
+                            </button>
+                            <button class="swiper-button-next bg-white p-2 rounded-full shadow hover:bg-gray-100">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.4028 11.1422C14.0068 10.5004 14.0068 9.4994 13.4028 8.85765L7.27366 2.34545C6.95823 2.01031 6.43084 1.99432 6.09569 2.30975C5.76055 2.62518 5.74457 3.15258 6.06 3.48773L12.1891 9.99992L6.06 16.5121C5.74457 16.8473 5.76055 17.3747 6.09569 17.6901C6.43084 18.0055 6.95824 17.9895 7.27367 17.6544L13.4028 11.1422Z"
+                                        fill="#000000" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-1 relative">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div
+                                class="swiper-slide bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
+                                <span class="font-semibold text-gray-700">Create Baseline</span>
+                                <button
+                                    class="flex justify-center items-center bg-[#034592] text-white px-4 py-2 rounded-xl hover:bg-blue-800 transition">Proceed
+                                    <svg width="16" height="16" class="ms-2" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.0002 8.66659H8.66683V11.9999C8.66683 12.3666 8.36683 12.6666 8.00016 12.6666C7.6335 12.6666 7.3335 12.3666 7.3335 11.9999V8.66659H4.00016C3.6335 8.66659 3.3335 8.36659 3.3335 7.99992C3.3335 7.63325 3.6335 7.33325 4.00016 7.33325H7.3335V3.99992C7.3335 3.63325 7.6335 3.33325 8.00016 3.33325C8.36683 3.33325 8.66683 3.63325 8.66683 3.99992V7.33325H12.0002C12.3668 7.33325 12.6668 7.63325 12.6668 7.99992C12.6668 8.36659 12.3668 8.66659 12.0002 8.66659Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="swiper-slide bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
+                                <span class="font-semibold text-gray-700">Create New PPV Request</span>
+                                <button
+                                    class="flex justify-center items-center bg-[#034592] text-white px-4 py-2 rounded-xl hover:bg-blue-800 transition">Proceed
+                                    <svg width="16" height="16" class="ms-2" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.4716 8.47149C14.7319 8.21114 14.7319 7.78903 14.4716 7.52868L11.8049 4.86201C11.5446 4.60166 11.1224 4.60166 10.8621 4.86201C10.6017 5.12236 10.6017 5.54447 10.8621 5.80482L12.3907 7.33341L2.00016 7.33341C1.63197 7.33341 1.3335 7.63189 1.3335 8.00008C1.3335 8.36827 1.63197 8.66675 2.00016 8.66675L12.3907 8.66675L10.8621 10.1953C10.6017 10.4557 10.6017 10.8778 10.8621 11.1382C11.1224 11.3985 11.5446 11.3985 11.8049 11.1382L14.4716 8.47149Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="swiper-slide bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
+                                <span class="font-semibold text-gray-700">Create New PPQ Request</span>
+                                <button
+                                    class="flex justify-center items-center bg-[#034592] text-white px-4 py-2 rounded-xl hover:bg-blue-800 transition">Proceed
+                                    <svg width="16" height="16" class="ms-2" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.4716 8.47149C14.7319 8.21114 14.7319 7.78903 14.4716 7.52868L11.8049 4.86201C11.5446 4.60166 11.1224 4.60166 10.8621 4.86201C10.6017 5.12236 10.6017 5.54447 10.8621 5.80482L12.3907 7.33341L2.00016 7.33341C1.63197 7.33341 1.3335 7.63189 1.3335 8.00008C1.3335 8.36827 1.63197 8.66675 2.00016 8.66675L12.3907 8.66675L10.8621 10.1953C10.6017 10.4557 10.6017 10.8778 10.8621 11.1382C11.1224 11.3985 11.5446 11.3985 11.8049 11.1382L14.4716 8.47149Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                class="swiper-slide bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
+                                <span class="font-semibold text-gray-700">Contractor Performance Center</span>
+                                <button
+                                    class="flex justify-center items-center bg-[#034592] text-white px-4 py-2 rounded-xl hover:bg-blue-800 transition">Proceed
+                                    <svg width="16" height="16" class="ms-2" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.4716 8.47149C14.7319 8.21114 14.7319 7.78903 14.4716 7.52868L11.8049 4.86201C11.5446 4.60166 11.1224 4.60166 10.8621 4.86201C10.6017 5.12236 10.6017 5.54447 10.8621 5.80482L12.3907 7.33341L2.00016 7.33341C1.63197 7.33341 1.3335 7.63189 1.3335 8.00008C1.3335 8.36827 1.63197 8.66675 2.00016 8.66675L12.3907 8.66675L10.8621 10.1953C10.6017 10.4557 10.6017 10.8778 10.8621 11.1382C11.1224 11.3985 11.5446 11.3985 11.8049 11.1382L14.4716 8.47149Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div
+                                class="swiper-slide bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
+                                <span class="font-semibold text-gray-700">Create Baseline</span>
+                                <button
+                                    class="flex justify-center items-center bg-[#034592] text-white px-4 py-2 rounded-xl hover:bg-blue-800 transition">Proceed
+                                    +</button>
+                            </div>
+                            <div
+                                class="swiper-slide bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
+                                <span class="font-semibold text-gray-700">Create New PPV Request</span>
+                                <button
+                                    class="flex justify-center items-center bg-[#034592] text-white px-4 py-2 rounded-xl hover:bg-blue-800 transition">Proceed
+                                    <svg width="16" height="16" class="ms-2" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.4716 8.47149C14.7319 8.21114 14.7319 7.78903 14.4716 7.52868L11.8049 4.86201C11.5446 4.60166 11.1224 4.60166 10.8621 4.86201C10.6017 5.12236 10.6017 5.54447 10.8621 5.80482L12.3907 7.33341L2.00016 7.33341C1.63197 7.33341 1.3335 7.63189 1.3335 8.00008C1.3335 8.36827 1.63197 8.66675 2.00016 8.66675L12.3907 8.66675L10.8621 10.1953C10.6017 10.4557 10.6017 10.8778 10.8621 11.1382C11.1224 11.3985 11.5446 11.3985 11.8049 11.1382L14.4716 8.47149Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <div class="container">
+        <div class="header">
+            <h1>PPQ Requests</h1>
+            <a href="#" class="see-all">See all</a>
+        </div>
+
+        <div class="table-container">
+            <div class="table-header">
+                <div class="header-cell">
+                    PPQ ID
+                    <div class="sort-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                </div>
+                <div class="header-cell">
+                    Solicitation
+                    <div class="sort-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                </div>
+                <div class="header-cell">
+                    Agency
+                    <div class="sort-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                </div>
+                <div class="header-cell">
+                    Status
+                    <div class="sort-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                </div>
+                <div class="header-cell">
+                    Responses
+                    <div class="sort-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                </div>
+                <div class="header-cell">
+                    Actions
+                    <div class="sort-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="cell" data-label="PPQ ID">
+                    <div class="ppq-id">PPQ - 2025 -001</div>
+                    <div class="created-date">Created 1/10/2025</div>
+                </div>
+                <div class="cell" data-label="Solicitation">
+                    <div class="solicitation-id">FA1234567</div>
+                    <div class="solicitation-desc">IT Infrastructure Support Services</div>
+                </div>
+                <div class="cell" data-label="Agency">
+                    <div>Cloudlink</div>
+                    <div>Technologies</div>
+                </div>
+                <div class="cell" data-label="Status">
+                    <span class="status-badge status-active">Active</span>
+                </div>
+                <div class="cell" data-label="Responses">
+                    <div class="responses-count">12</div>
+                </div>
+                <div class="cell" data-label="Actions">
+                    <button class="view-btn">View Responses</button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="cell" data-label="PPQ ID">
+                    <div class="ppq-id">PPQ - 2025 -001</div>
+                    <div class="created-date">Created 1/10/2025</div>
+                </div>
+                <div class="cell" data-label="Solicitation">
+                    <div class="solicitation-id">FA1234567</div>
+                    <div class="solicitation-desc">IT Infrastructure Support Services</div>
+                </div>
+                <div class="cell" data-label="Agency">
+                    <div>Cloudlink</div>
+                    <div>Technologies</div>
+                </div>
+                <div class="cell" data-label="Status">
+                    <span class="status-badge status-closed">Closed</span>
+                </div>
+                <div class="cell" data-label="Responses">
+                    <div class="responses-count">12</div>
+                    <div class="pending-review">3 pending review</div>
+                </div>
+                <div class="cell" data-label="Actions">
+                    <button class="view-btn">View Responses</button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="cell" data-label="PPQ ID">
+                    <div class="ppq-id">PPQ - 2025 -001</div>
+                    <div class="created-date">Created 1/10/2025</div>
+                </div>
+                <div class="cell" data-label="Solicitation">
+                    <div class="solicitation-id">FA1234567</div>
+                    <div class="solicitation-desc">IT Infrastructure Support Services</div>
+                </div>
+                <div class="cell" data-label="Agency">
+                    <div>Cloudlink</div>
+                    <div>Technologies</div>
+                </div>
+                <div class="cell" data-label="Status">
+                    <span class="status-badge status-active">Active</span>
+                </div>
+                <div class="cell" data-label="Responses">
+                    <div class="responses-count">18</div>
+                </div>
+                <div class="cell" data-label="Actions">
+                    <button class="view-btn">View Responses</button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="cell" data-label="PPQ ID">
+                    <div class="ppq-id">PPQ - 2025 -001</div>
+                    <div class="created-date">Created 1/10/2025</div>
+                </div>
+                <div class="cell" data-label="Solicitation">
+                    <div class="solicitation-id">FA1234567</div>
+                    <div class="solicitation-desc">IT Infrastructure Support Services</div>
+                </div>
+                <div class="cell" data-label="Agency">
+                    <div>Cloudlink</div>
+                    <div>Technologies</div>
+                </div>
+                <div class="cell" data-label="Status">
+                    <span class="status-badge status-closed">Closed</span>
+                </div>
+                <div class="cell" data-label="Responses">
+                    <div class="responses-count">8</div>
+                </div>
+                <div class="cell" data-label="Actions">
+                    <button class="view-btn">View Responses</button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="cell" data-label="PPQ ID">
+                    <div class="ppq-id">PPQ - 2025 -001</div>
+                    <div class="created-date">Created 1/10/2025</div>
+                </div>
+                <div class="cell" data-label="Solicitation">
+                    <div class="solicitation-id">FA1234567</div>
+                    <div class="solicitation-desc">IT Infrastructure Support Services</div>
+                </div>
+                <div class="cell" data-label="Agency">
+                    <div>Cloudlink</div>
+                    <div>Technologies</div>
+                </div>
+                <div class="cell" data-label="Status">
+                    <span class="status-badge status-active">Active</span>
+                </div>
+                <div class="cell" data-label="Responses">
+                    <div class="responses-count">7</div>
+                </div>
+                <div class="cell" data-label="Actions">
+                    <button class="view-btn">View Responses</button>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="cell" data-label="PPQ ID">
+                    <div class="ppq-id">PPQ - 2025 -001</div>
+                    <div class="created-date">Created 1/10/2025</div>
+                </div>
+                <div class="cell" data-label="Solicitation">
+                    <div class="solicitation-id">FA1234567</div>
+                    <div class="solicitation-desc">IT Infrastructure Support Services</div>
+                </div>
+                <div class="cell" data-label="Agency">
+                    <div>Cloudlink</div>
+                    <div>Technologies</div>
+                </div>
+                <div class="cell" data-label="Status">
+                    <span class="status-badge status-active">Active</span>
+                </div>
+                <div class="cell" data-label="Responses">
+                    <div class="responses-count">24</div>
+                </div>
+                <div class="cell" data-label="Actions">
+                    <button class="view-btn">View Responses</button>
+                </div>
+            </div>
+        </div>
+    </div>
         </div>
     </div>
 
@@ -342,21 +643,63 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper(".mySwiper", {
-            slidesPerView: 4,
-            spaceBetween: 20,
-            loop: true,
+        const swiper = new Swiper('.mySwiper', {
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
+            spaceBetween: 20,
+            slidesPerView: 3.5,
+
             breakpoints: {
-                320: { slidesPerView: 1 },
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 4 },
+                320: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 15,
+                },
+                640: {
+                    slidesPerView: 2.8,
+                    spaceBetween: 15,
+                },
+                1024: {
+                    slidesPerView: 4.3,
+                    spaceBetween: 16,
+                }
             },
+
+            on: {
+                init() {
+                    updateOpacity(this);
+                },
+                slideChange() {
+                    updateOpacity(this);
+                },
+                resize() {
+                    updateOpacity(this);
+                }
+            }
         });
+
+        function updateOpacity(swiper) {
+            const slides = swiper.slides;
+            const activeIndex = swiper.activeIndex;
+
+            // Reset all slides → full opacity
+            slides.forEach(slide => {
+                slide.style.opacity = "1";
+            });
+
+            // Calculate half-visible card index
+            const halfVisibleIndex = activeIndex + Math.ceil(swiper.params.slidesPerView);
+
+            // Apply 0.4 opacity to half card
+            if (slides[halfVisibleIndex]) {
+                slides[halfVisibleIndex].style.opacity = "0.4";
+            }
+        }
     </script>
+
+
+
 
 </body>
 
