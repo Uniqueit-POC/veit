@@ -9,24 +9,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assest/css/dev-style.css">
 
-    <style>
-        .sidebar-closed {
-            margin-left: -277px;
-        }
-
-        .content-expanded {
-            margin-left: 0 !important;
-        }
-
-        .swiper-slide {
-            transition: transform 0.3s ease;
-        }
-
-        .swiper-slide-next {
-            opacity: 0.5;
-            transform: scale(0.95);
-        }
-    </style>
 </head>
 
 <body class="bg-gray-100 overflow-x-hidden">
@@ -127,11 +109,194 @@
                 </a>
             </li>
         </ul>
+
+        
     </div>
+
+    <div id="sidebar"
+    class="fixed overflow-auto custom-sidebar p-3 fixed top-0 left-0 h-screen w-[272px] bg-[#101928] text-white transition-all duration-300 z-50 flex flex-col justify-between">
+
+    <!-- TOP SECTION -->
+    <div>
+        <div class="flex justify-between items-center py-2 px-6">
+            <img src="./assest/img/logo/logo.svg" alt="" class="w-[60px] h-[48px]">
+
+            <button onclick="toggleSidebar()" class="p-2 hover:bg-gray-700 rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+           <ul class="mt-3 space-y-2">
+            <li>
+                <a href="#"
+                    class="flex items-center gap-3 text-sm font-medium text-white h-11 px-4 py-3 rounded  hover:bg-gray-800 transition  active:bg-gray-800">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66667 7.66667C1.74619 7.66667 1 6.92047 1 6V2.66667C1 1.74619 1.74619 1 2.66667 1H6C6.92047 1 7.66667 1.74619 7.66667 2.66667V6C7.66667 6.92047 6.92048 7.66667 6 7.66667H2.66667ZM2.33333 6C2.33333 6.18409 2.48257 6.33333 2.66667 6.33333L6 6.33333C6.1841 6.33333 6.33333 6.18409 6.33333 6V2.66667C6.33333 2.48257 6.1841 2.33333 6 2.33333L2.66667 2.33333C2.48257 2.33333 2.33333 2.48257 2.33333 2.66667L2.33333 6Z"
+                            fill="#ffffff" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1 13.3333C1 14.2538 1.74619 15 2.66667 15H6C6.92048 15 7.66667 14.2538 7.66667 13.3333V10C7.66667 9.07953 6.92047 8.33333 6 8.33333H2.66667C1.74619 8.33333 1 9.07953 1 10V13.3333ZM2.66667 13.6667C2.48257 13.6667 2.33333 13.5174 2.33333 13.3333L2.33333 10C2.33333 9.81591 2.48257 9.66667 2.66667 9.66667H6C6.1841 9.66667 6.33333 9.81591 6.33333 10V13.3333C6.33333 13.5174 6.1841 13.6667 6 13.6667H2.66667Z"
+                            fill="#ffffff" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.33333 13.3333C8.33333 14.2538 9.07953 15 10 15H13.3333C14.2538 15 15 14.2538 15 13.3333V10C15 9.07952 14.2538 8.33333 13.3333 8.33333H10C9.07952 8.33333 8.33333 9.07953 8.33333 10V13.3333ZM10 13.6667C9.81591 13.6667 9.66667 13.5174 9.66667 13.3333V10C9.66667 9.81591 9.8159 9.66667 10 9.66667H13.3333C13.5174 9.66667 13.6667 9.81591 13.6667 10V13.3333C13.6667 13.5174 13.5174 13.6667 13.3333 13.6667H10Z"
+                            fill="#ffffff" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.33333 6C8.33333 6.92047 9.07953 7.66667 10 7.66667H13.3333C14.2538 7.66667 15 6.92047 15 6V2.66667C15 1.74619 14.2538 1 13.3333 1H10C9.07952 1 8.33333 1.74619 8.33333 2.66667V6ZM10 6.33333C9.81591 6.33333 9.66667 6.18409 9.66667 6V2.66667C9.66667 2.48257 9.8159 2.33333 10 2.33333L13.3333 2.33333C13.5174 2.33333 13.6667 2.48257 13.6667 2.66667V6C13.6667 6.18409 13.5174 6.33333 13.3333 6.33333L10 6.33333Z"
+                            fill="#ffffff" />
+                    </svg>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                    class="flex items-center gap-3 text-sm font-medium text-white h-11 px-4 py-3 rounded  hover:bg-gray-800 transition  active:bg-gray-800">
+                    <svg width="20" height="20" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.3625 1.61377C12.8858 0.59594 11.0958 0 9.16667 0C4.10406 0 0 4.10406 0 9.16667C0 14.2293 4.10406 18.3333 9.16667 18.3333C14.2293 18.3333 18.3333 14.2293 18.3333 9.16667C18.3333 7.2375 17.7374 5.44753 16.7196 3.97079L15.5166 5.17377C16.2452 6.32998 16.6667 7.6991 16.6667 9.16667C16.6667 13.3088 13.3088 16.6667 9.16667 16.6667C5.02453 16.6667 1.66667 13.3088 1.66667 9.16667C1.66667 5.02453 5.02453 1.66667 9.16667 1.66667C10.6342 1.66667 12.0034 2.08818 13.1596 2.81675L14.3625 1.61377Z"
+                            fill="#F0F2F5" />
+                        <path
+                            d="M15.8333 0C16.2936 0 16.6667 0.373096 16.6667 0.833333V1.66667H17.5C17.9602 1.66667 18.3333 2.03976 18.3333 2.5C18.3333 2.96024 17.9602 3.33333 17.5 3.33333H16.1785L10.7091 8.80275C11.0251 8.92118 11.25 9.22599 11.25 9.58333C11.25 10.0436 10.8769 10.4167 10.4167 10.4167H8.75C8.28976 10.4167 7.91667 10.0436 7.91667 9.58333V7.91667C7.91667 7.45643 8.28976 7.08333 8.75 7.08333C9.10734 7.08333 9.41215 7.30825 9.53058 7.62424L15 2.15482V0.833333C15 0.373096 15.3731 0 15.8333 0Z"
+                            fill="#F0F2F5" />
+                        <path
+                            d="M9.16667 3.33333C10.1713 3.33333 11.1165 3.58728 11.9418 4.03448L10.6893 5.28699C10.2177 5.10173 9.70405 5 9.16667 5C6.86548 5 5 6.86548 5 9.16667C5 11.4679 6.86548 13.3333 9.16667 13.3333C11.4679 13.3333 13.3333 11.4679 13.3333 9.16667C13.3333 8.62928 13.2316 8.11566 13.0463 7.64401L14.2989 6.3915C14.7461 7.21678 15 8.16207 15 9.16667C15 12.3883 12.3883 15 9.16667 15C5.94501 15 3.33333 12.3883 3.33333 9.16667C3.33333 5.94501 5.94501 3.33333 9.16667 3.33333Z"
+                            fill="#F0F2F5" />
+                    </svg>
+                    CPMC
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                    class="flex items-center gap-3 text-sm font-medium text-white h-11 px-4 py-3 rounded  hover:bg-gray-800 transition  active:bg-gray-800">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.63918 2.5C2.99755 2.5 1.66675 3.8308 1.66675 5.47243V14.1667C1.66675 16.0076 3.15913 17.5 5.00008 17.5H15.0001C16.841 17.5 18.3334 16.0076 18.3334 14.1667V8.5C18.3334 6.65955 16.8427 5.16667 15.0012 5.16667H10.333C10.3188 5.1603 10.3015 5.15222 10.2821 5.1423C10.2418 5.12178 10.2026 5.09927 10.1715 5.07964C10.1573 5.07067 10.1472 5.06377 10.141 5.05943C10.0249 4.95563 9.85548 4.7775 9.62065 4.52691L9.57485 4.47802C9.35714 4.24558 9.103 3.97424 8.84156 3.71696C8.56425 3.44405 8.25367 3.16171 7.94048 2.94299C7.65786 2.7456 7.23637 2.5 6.76205 2.5H4.63918ZM8.4045 5.66654C8.62528 5.90215 8.85875 6.15095 9.04831 6.31802C9.18303 6.43675 9.37501 6.5507 9.52553 6.62738C9.6093 6.67005 9.70671 6.71477 9.80737 6.75086C9.88803 6.77978 10.0505 6.83333 10.2373 6.83333H15.0012C15.9212 6.83333 16.6667 7.57903 16.6667 8.5V14.1667C16.6667 15.0871 15.9206 15.8333 15.0001 15.8333H5.00008C4.07961 15.8333 3.33341 15.0871 3.33341 14.1667V5.47243C3.33341 4.75128 3.91803 4.16667 4.63918 4.16667H6.73682C6.73756 4.16723 6.74008 4.16825 6.74445 4.17003C6.76802 4.17961 6.84536 4.21105 6.98618 4.3094C7.18584 4.44884 7.41892 4.65529 7.67253 4.90487C7.90877 5.13736 8.14115 5.38542 8.36319 5.62245L8.4045 5.66654Z"
+                            fill="#F0F2F5" />
+                    </svg>
+                    PPVs
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                    class="flex items-center gap-3 text-sm font-medium text-white h-11 px-4 py-3 rounded  hover:bg-gray-800 transition  active:bg-gray-800">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.83333 9.99992C5.83333 9.53968 6.20643 9.16659 6.66667 9.16659H13.3333C13.7936 9.16659 14.1667 9.53968 14.1667 9.99992C14.1667 10.4602 13.7936 10.8333 13.3333 10.8333H6.66667C6.20643 10.8333 5.83333 10.4602 5.83333 9.99992Z"
+                            fill="#F0F2F5" />
+                        <path
+                            d="M6.66667 13.3333C6.20643 13.3333 5.83333 13.7063 5.83333 14.1666C5.83333 14.6268 6.20643 14.9999 6.66667 14.9999H13.3333C13.7936 14.9999 14.1667 14.6268 14.1667 14.1666C14.1667 13.7063 13.7936 13.3333 13.3333 13.3333H6.66667Z"
+                            fill="#F0F2F5" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5.83333 0.833252C3.99238 0.833252 2.5 2.32564 2.5 4.16659V15.8333C2.5 17.6742 3.99238 19.1666 5.83333 19.1666H14.1667C16.0076 19.1666 17.5 17.6742 17.5 15.8333V7.57171C17.5 6.79192 17.2266 6.03681 16.7274 5.43776L13.8898 2.03264C13.2565 1.27266 12.3183 0.833252 11.3291 0.833252H5.83333ZM4.16667 4.16659C4.16667 3.24611 4.91286 2.49992 5.83333 2.49992H10.8333V4.99992C10.8333 6.84087 12.3257 8.33325 14.1667 8.33325H15.8333V15.8333C15.8333 16.7537 15.0871 17.4999 14.1667 17.4999H5.83333C4.91286 17.4999 4.16667 16.7537 4.16667 15.8333V4.16659ZM15.5661 6.66659C15.5299 6.61053 15.4901 6.55647 15.447 6.50474L12.6094 3.09961C12.5747 3.05797 12.5382 3.01825 12.5 2.98054V4.99992C12.5 5.92039 13.2462 6.66659 14.1667 6.66659H15.5661Z"
+                            fill="#F0F2F5" />
+                    </svg>
+                    PPQs
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                    class="flex items-center gap-3 text-sm font-medium text-white h-11 px-4 py-3 rounded  hover:bg-gray-800 transition  active:bg-gray-800">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.33333 0.833252C7.24482 0.833252 6.31879 1.52892 5.97559 2.49992H5.83333C3.99238 2.49992 2.5 3.9923 2.5 5.83325V14.9999C2.5 16.8409 3.99238 18.3333 5.83333 18.3333H14.1667C16.0076 18.3333 17.5 16.8409 17.5 14.9999V5.83325C17.5 3.9923 16.0076 2.49992 14.1667 2.49992H14.0244C13.6812 1.52892 12.7552 0.833252 11.6667 0.833252H8.33333ZM7.5 3.33325C7.5 2.87301 7.8731 2.49992 8.33333 2.49992H11.6667C12.1269 2.49992 12.5 2.87301 12.5 3.33325C12.5 3.79349 12.1269 4.16659 11.6667 4.16659H8.33333C7.8731 4.16659 7.5 3.79349 7.5 3.33325ZM4.16667 5.83325C4.16667 4.91278 4.91286 4.16659 5.83333 4.16659H5.97559C6.31879 5.13758 7.24482 5.83325 8.33333 5.83325H11.6667C12.7552 5.83325 13.6812 5.13758 14.0244 4.16659H14.1667C15.0871 4.16659 15.8333 4.91278 15.8333 5.83325V14.9999C15.8333 15.9204 15.0871 16.6666 14.1667 16.6666H5.83333C4.91286 16.6666 4.16667 15.9204 4.16667 14.9999V5.83325Z"
+                            fill="#F0F2F5" />
+                    </svg>
+                    Summaries
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    
+    <div class="pb-4"> 
+         <ul class="mt-3 space-y-2">
+            <li>
+                <a href="#"
+                    class="flex items-center gap-3 text-sm font-medium text-white h-11 px-4 py-3 rounded  hover:bg-gray-800 transition  active:bg-gray-800">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.66667 7.66667C1.74619 7.66667 1 6.92047 1 6V2.66667C1 1.74619 1.74619 1 2.66667 1H6C6.92047 1 7.66667 1.74619 7.66667 2.66667V6C7.66667 6.92047 6.92048 7.66667 6 7.66667H2.66667ZM2.33333 6C2.33333 6.18409 2.48257 6.33333 2.66667 6.33333L6 6.33333C6.1841 6.33333 6.33333 6.18409 6.33333 6V2.66667C6.33333 2.48257 6.1841 2.33333 6 2.33333L2.66667 2.33333C2.48257 2.33333 2.33333 2.48257 2.33333 2.66667L2.33333 6Z"
+                            fill="#ffffff" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1 13.3333C1 14.2538 1.74619 15 2.66667 15H6C6.92048 15 7.66667 14.2538 7.66667 13.3333V10C7.66667 9.07953 6.92047 8.33333 6 8.33333H2.66667C1.74619 8.33333 1 9.07953 1 10V13.3333ZM2.66667 13.6667C2.48257 13.6667 2.33333 13.5174 2.33333 13.3333L2.33333 10C2.33333 9.81591 2.48257 9.66667 2.66667 9.66667H6C6.1841 9.66667 6.33333 9.81591 6.33333 10V13.3333C6.33333 13.5174 6.1841 13.6667 6 13.6667H2.66667Z"
+                            fill="#ffffff" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.33333 13.3333C8.33333 14.2538 9.07953 15 10 15H13.3333C14.2538 15 15 14.2538 15 13.3333V10C15 9.07952 14.2538 8.33333 13.3333 8.33333H10C9.07952 8.33333 8.33333 9.07953 8.33333 10V13.3333ZM10 13.6667C9.81591 13.6667 9.66667 13.5174 9.66667 13.3333V10C9.66667 9.81591 9.8159 9.66667 10 9.66667H13.3333C13.5174 9.66667 13.6667 9.81591 13.6667 10V13.3333C13.6667 13.5174 13.5174 13.6667 13.3333 13.6667H10Z"
+                            fill="#ffffff" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.33333 6C8.33333 6.92047 9.07953 7.66667 10 7.66667H13.3333C14.2538 7.66667 15 6.92047 15 6V2.66667C15 1.74619 14.2538 1 13.3333 1H10C9.07952 1 8.33333 1.74619 8.33333 2.66667V6ZM10 6.33333C9.81591 6.33333 9.66667 6.18409 9.66667 6V2.66667C9.66667 2.48257 9.8159 2.33333 10 2.33333L13.3333 2.33333C13.5174 2.33333 13.6667 2.48257 13.6667 2.66667V6C13.6667 6.18409 13.5174 6.33333 13.3333 6.33333L10 6.33333Z"
+                            fill="#ffffff" />
+                    </svg>
+                    Dashboard
+                </a>
+            </li>
+            
+            <li>
+                <a href="#"
+                    class="flex items-center gap-3 text-sm font-medium text-white h-11 px-4 py-3 rounded  hover:bg-gray-800 transition  active:bg-gray-800">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.33333 0.833252C7.24482 0.833252 6.31879 1.52892 5.97559 2.49992H5.83333C3.99238 2.49992 2.5 3.9923 2.5 5.83325V14.9999C2.5 16.8409 3.99238 18.3333 5.83333 18.3333H14.1667C16.0076 18.3333 17.5 16.8409 17.5 14.9999V5.83325C17.5 3.9923 16.0076 2.49992 14.1667 2.49992H14.0244C13.6812 1.52892 12.7552 0.833252 11.6667 0.833252H8.33333ZM7.5 3.33325C7.5 2.87301 7.8731 2.49992 8.33333 2.49992H11.6667C12.1269 2.49992 12.5 2.87301 12.5 3.33325C12.5 3.79349 12.1269 4.16659 11.6667 4.16659H8.33333C7.8731 4.16659 7.5 3.79349 7.5 3.33325ZM4.16667 5.83325C4.16667 4.91278 4.91286 4.16659 5.83333 4.16659H5.97559C6.31879 5.13758 7.24482 5.83325 8.33333 5.83325H11.6667C12.7552 5.83325 13.6812 5.13758 14.0244 4.16659H14.1667C15.0871 4.16659 15.8333 4.91278 15.8333 5.83325V14.9999C15.8333 15.9204 15.0871 16.6666 14.1667 16.6666H5.83333C4.91286 16.6666 4.16667 15.9204 4.16667 14.9999V5.83325Z"
+                            fill="#F0F2F5" />
+                    </svg>
+                    Summaries
+                </a>
+            </li>
+        </ul>
+    <div class="bg-gradient-to-br from-[#0F1A2A] to-[#0A1220] 
+                rounded-2xl p-5 border border-white/5 relative">
+
+        <!-- Background subtle shape (optional) -->
+        <div class="absolute right-2 top-2">
+            <img src="./assest/img/taskbord/Vector.svg" class="w-20" />
+        </div>
+
+        <!-- Icon -->
+        <div class="flex">
+            <img src="./assest/img/taskbord/Browser & URL Controls.svg  " class="border border-[#667085] w-10 h-10 rounded-lg mb-4 relative z-10" />
+        </div>
+
+        <!-- Title -->
+        <h3 class="text-white font-semibold text-lg relative z-10">
+            Welcome
+        </h3>
+
+        <!-- Subtitle -->
+        <p class="text-gray-300 text-sm mt-1 leading-relaxed relative z-10">
+            The VEIT Tool - AI That Thinks Like a Contracting Officer.
+        </p>
+    </div>
+
+    <div class="flex items-center gap-3 shadow-lg cursor-pointer transition border-t border-[#1D2739] pt-4">
+        
+        <img src="./assest/img/avtar.png" 
+             class="w-10 h-10 rounded-full object-cover" 
+             alt="Profile">
+
+        <div class="flex-1">
+            <p class="font-medium text-white text-sm">Alison Dinna</p>
+            <p class="text-xs text-gray-300">alisona@veit.com</p>
+        </div>
+
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.24996 3.33341C6.7102 3.33341 7.08329 2.96032 7.08329 2.50008C7.08329 2.03984 6.7102 1.66675 6.24996 1.66675H4.99996C3.15901 1.66675 1.66663 3.15913 1.66663 5.00008V15.0001C1.66663 16.841 3.15901 18.3334 4.99996 18.3334H6.24996C6.7102 18.3334 7.08329 17.9603 7.08329 17.5001C7.08329 17.0398 6.7102 16.6667 6.24996 16.6667H4.99996C4.07949 16.6667 3.33329 15.9206 3.33329 15.0001L3.33329 5.00008C3.33329 4.07961 4.07949 3.33341 4.99996 3.33341H6.24996Z" fill="white"/>
+            <path d="M18.9225 10.5893C19.248 10.2639 19.248 9.73626 18.9225 9.41083L15.5892 6.07749C15.2638 5.75206 14.7361 5.75206 14.4107 6.07749C14.0853 6.40293 14.0853 6.93057 14.4107 7.256L16.3214 9.16675L6.66663 9.16675C6.20639 9.16675 5.83329 9.53984 5.83329 10.0001C5.83329 10.4603 6.20639 10.8334 6.66663 10.8334L16.3214 10.8334L14.4107 12.7442C14.0853 13.0696 14.0853 13.5972 14.4107 13.9227C14.7361 14.2481 15.2638 14.2481 15.5892 13.9227L18.9225 10.5893Z" fill="white"/>
+        </svg>
+
+    </div>
+</div>
+</div>
+
 
     <div class="bg-[#101928] min-h-screen pt-2">
         <div id="content" class="ml-[282px] transition-all duration-300 bg-white rounded-[20px] shadow-lg m-2 mt-0">
-            <div class="p-5 flex justify-between items-center border border-b border-[]">
+            <div class="p-5 flex justify-between items-center border-b border-[]">
                 <div>
                     <button onclick="toggleSidebar()"
                         class="text-sm bg-[#ffffff] border border-1 border-[#0000001A] shadow-[0_4px_20px_#1018280D] px-4 py-2 rounded-lg text-[#344054] font-medium flex items-center gap-2">
@@ -336,10 +501,10 @@
                 </div>
 
                 <div class="flex-1 relative">
-                    <div class="swiper mySwiper">
+                    <div class="swiper mySwiper overflow-visible">
                         <div class="swiper-wrapper py-1">
                             <div
-                                class="swiper-slide bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
+                                class="swiper-slide flex flex-col justify-between transition-transform duration-300 ease-in-out bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
                                 <span class="font-semibold text-[#667085]">Create Baseline</span>
                                 <button
                                     class="flex justify-center items-center bg-[#034592] text-white px-4 py-2 rounded-xl hover:bg-blue-800 transition">Proceed
@@ -352,7 +517,7 @@
                                 </button>
                             </div>
                             <div
-                                class="swiper-slide bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
+                                class="swiper-slide flex flex-col justify-between transition-transform duration-300 ease-in-out bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
                                 <span class="font-semibold text-[#667085]">Create New PPV Request</span>
                                 <button
                                     class="flex justify-center items-center bg-[#034592] text-white px-4 py-2 rounded-xl hover:bg-blue-800 transition">Proceed
@@ -365,7 +530,7 @@
                                 </button>
                             </div>
                             <div
-                                class="swiper-slide bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
+                                class="swiper-slide flex flex-col justify-between transition-transform duration-300 ease-in-out bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
                                 <span class="font-semibold text-[#667085]">Create New PPQ Request</span>
                                 <button
                                     class="flex justify-center items-center bg-[#034592] text-white px-4 py-2 rounded-xl hover:bg-blue-800 transition">Proceed
@@ -378,8 +543,8 @@
                                 </button>
                             </div>
                             <div
-                                class="swiper-slide bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
-                                <span class="font-semibold text-[#667085]">Contractor Performance Center</span>
+                                class="swiper-slide flex flex-col justify-between transition-transform duration-300 ease-in-out bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
+                                <span class="font-semibold text-[#667085]">Contractor Performance</span>
                                 <button
                                     class="flex justify-center items-center bg-[#034592] text-white px-4 py-2 rounded-xl hover:bg-blue-800 transition">Proceed
                                     <svg width="16" height="16" class="ms-2" viewBox="0 0 16 16" fill="none"
@@ -392,14 +557,14 @@
                             </div>
 
                             <div
-                                class="swiper-slide bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
+                                class="swiper-slide flex flex-col justify-between transition-transform duration-300 ease-in-out bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
                                 <span class="font-semibold text-[#667085]">Create Baseline</span>
                                 <button
                                     class="flex justify-center items-center bg-[#E4E7EC] text-white px-4 py-2 rounded-xl hover:bg-blue-800 transition">Proceed
                                     +</button>
                             </div>
                             <div
-                                class="swiper-slide bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
+                                class="swiper-slide flex flex-col justify-between transition-transform duration-300 ease-in-out bg-white p-4 rounded-xl shadow hover:shadow-lg flex flex-col justify-between gap-6">
                                 <span class="font-semibold text-[#667085]">Create New PPV Request</span>
                                 <button
                                     class="flex justify-center items-center bg-[#034592] text-white px-4 py-2 rounded-xl hover:bg-blue-800 transition">Proceed
@@ -421,9 +586,9 @@
                     <a href="#" class="font-normal text-base text-[#6A6A70]">See all</a>
                 </div>
 
-                <div class="table-container">
-                    <div class="table-header">
-                        <div class="header-cell">
+                <div class="shadow-sm bg-white rounded-lg overflow-hidden shadow">
+                    <div class="grid grid-cols-[2fr_2.5fr_2fr_1.5fr_2fr_2fr] bg-[#f9fafb] px-6 py-4 border-b border-[#e5e7eb] gap-4 max-[1200px]:grid-cols-[1.5fr_2fr_1.5fr_1fr_1.5fr_1.5fr] max-[992px]:hidden">
+                        <div class="w-[200px] flex items-center justify-between gap-2 text-[12px] font-medium text-[#344054] cursor-pointer select-none">
                             PPQ ID
                             <div class="sort-icon">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -432,7 +597,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="header-cell">
+                        <div class="w-[300px] flex items-center justify-between gap-2 text-[12px] font-medium text-[#344054] cursor-pointer select-none">
                             Solicitation
                             <div class="sort-icon">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -441,7 +606,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="header-cell">
+                        <div class="w-[300px] flex items-center justify-between gap-2 text-[12px] font-medium text-[#344054] cursor-pointer select-none">
                             Agency
                             <div class="sort-icon">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -450,7 +615,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="header-cell">
+                        <div class="w-[100px] flex items-center justify-between gap-2 text-[12px] font-medium text-[#344054] cursor-pointer select-none">
                             Status
                             <div class="sort-icon">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -459,16 +624,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="header-cell">
-                            Responses
-                            <div class="sort-icon">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.5891 2.74408C10.4328 2.5878 10.2209 2.5 9.99984 2.5C9.77882 2.5 9.56686 2.5878 9.41058 2.74408L4.41058 7.74408C4.08514 8.06952 4.08514 8.59715 4.41058 8.92259C4.73602 9.24803 5.26366 9.24803 5.58909 8.92259L9.99984 4.51184L14.4106 8.92259C14.736 9.24803 15.2637 9.24803 15.5891 8.92259C15.9145 8.59715 15.9145 8.06952 15.5891 7.74408L10.5891 2.74408Z" fill="#667185"/>
-                                    <path d="M10.5891 18.0893C10.4328 18.2455 10.2209 18.3333 9.99984 18.3333C9.77882 18.3333 9.56686 18.2455 9.41058 18.0893L4.41058 13.0893C4.08514 12.7638 4.08514 12.2362 4.41058 11.9107C4.73602 11.5853 5.26366 11.5853 5.58909 11.9107L9.99984 16.3215L14.4106 11.9107C14.736 11.5853 15.2637 11.5853 15.5891 11.9107C15.9145 12.2362 15.9145 12.7638 15.5891 13.0893L10.5891 18.0893Z" fill="#667185"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="header-cell">
+                        <div class="w-[100px] flex items-center justify-between gap-2 text-[12px] font-medium text-[#344054] cursor-pointer select-none">
                             Actions
                             <div class="sort-icon">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -479,148 +635,165 @@
                         </div>
                     </div>
 
-                    <div class="table-row">
-                        <div class="cell" data-label="PPQ ID">
-                            <div class="ppq-id">PPQ - 2025 -001</div>
-                            <div class="created-date">Created 1/10/2025</div>
+                    <div class="grid grid-cols-[2fr_2.5fr_2fr_1.5fr_2fr_2fr] gap-4 items-center p-5 border-b border-gray-200 transition-colors hover:bg-gray-100 last:border-b-0  xl:grid-cols-[1.5fr_2fr_1.5fr_1fr_1.5fr_1.5fr] lg:grid-cols-1 lg:gap-3 lg:p-4  sm:p-3">
+                        <div class="w-[200px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="PPQ ID">
+                            <div class="font-semibold text-gray-800 mb-1">PPQ - 2025 -001</div>
+                            <div class="text-xs text-gray-500">Created 1/10/2025</div>
                         </div>
-                        <div class="cell" data-label="Solicitation">
-                            <div class="solicitation-id">FA1234567</div>
-                            <div class="solicitation-desc">IT Infrastructure Support Services</div>
+                        <div class="w-[300px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Solicitation">
+                            <div class="font-medium text-gray-800 mb-1">FA1234567</div>
+                            <div class="text-xs text-gray-500">IT Infrastructure Support Services</div>
                         </div>
-                        <div class="cell" data-label="Agency">
+                        <div class="w-[300px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Agency">
                             <div>Cloudlink</div>
                             <div>Technologies</div>
                         </div>
-                        <div class="cell" data-label="Status">
-                            <span class="status-badge status-active">Active</span>
+                        <div class="w-[100px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Status">
+                            <span class="inline-block px-3 py-1 rounded-full text-sm font-medium w-fit status-active bg-[#E7F6EC] text-[#036B26]">Active</span>
                         </div>
-                        <div class="cell" data-label="Responses">
-                            <div class="responses-count">12</div>
-                        </div>
-                        <div class="cell" data-label="Actions">
-                            <button class="view-btn">View Responses</button>
+                        <div class="w-[100px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Actions">
+                            <button class="flex justify-center items-center border border-gray-300 bg-white rounded-lg text-sm font-medium text-gray-700 cursor-pointer transition-all hover:bg-gray-100 hover:border-gray-400 w-[32px] h-[32px]">
+                                <svg width="2" height="13" viewBox="0 0 2 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z" fill="black"/>
+                                    <path d="M2 6.33333C2 6.88562 1.55228 7.33333 1 7.33333C0.447715 7.33333 0 6.88562 0 6.33333C0 5.78105 0.447715 5.33333 1 5.33333C1.55228 5.33333 2 5.78105 2 6.33333Z" fill="black"/>
+                                    <path d="M1 12.6667C1.55228 12.6667 2 12.219 2 11.6667C2 11.1144 1.55228 10.6667 1 10.6667C0.447715 10.6667 0 11.1144 0 11.6667C0 12.219 0.447715 12.6667 1 12.6667Z" fill="black"/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
 
-                    <div class="table-row">
-                        <div class="cell" data-label="PPQ ID">
-                            <div class="ppq-id">PPQ - 2025 -001</div>
-                            <div class="created-date">Created 1/10/2025</div>
+                    <div class="grid grid-cols-[2fr_2.5fr_2fr_1.5fr_2fr_2fr] gap-4 items-center p-5 border-b border-gray-200 transition-colors hover:bg-gray-100 last:border-b-0  xl:grid-cols-[1.5fr_2fr_1.5fr_1fr_1.5fr_1.5fr] lg:grid-cols-1 lg:gap-3 lg:p-4  sm:p-3">
+                        <div class="w-[200px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="PPQ ID">
+                            <div class="font-semibold text-gray-800 mb-1">PPQ - 2025 -001</div>
+                            <div class="text-xs text-gray-500">Created 1/10/2025</div>
                         </div>
-                        <div class="cell" data-label="Solicitation">
-                            <div class="solicitation-id">FA1234567</div>
-                            <div class="solicitation-desc">IT Infrastructure Support Services</div>
+                        <div class="w-[300px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Solicitation">
+                            <div class="font-medium text-gray-800 mb-1">FA1234567</div>
+                            <div class="text-xs text-gray-500">IT Infrastructure Support Services</div>
                         </div>
-                        <div class="cell" data-label="Agency">
+                        <div class="w-[300px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Agency">
                             <div>Cloudlink</div>
                             <div>Technologies</div>
                         </div>
-                        <div class="cell" data-label="Status">
-                            <span class="status-badge status-closed">Closed</span>
+                        <div class="w-[100px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Status">
+                            <span class="inline-block px-3 py-1 rounded-full text-sm font-medium w-fit status-closed bg-[#D0D5DD] text-[#344054]">Closed</span>
                         </div>
-                        <div class="cell" data-label="Responses">
-                            <div class="responses-count">12</div>
-                            <div class="pending-review">3 pending review</div>
-                        </div>
-                        <div class="cell" data-label="Actions">
-                            <button class="view-btn">View Responses</button>
+                        <div class="w-[100px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Actions">
+                            <button class="flex justify-center items-center border border-gray-300 bg-white rounded-lg text-sm font-medium text-gray-700 cursor-pointer transition-all hover:bg-gray-100 hover:border-gray-400 w-[32px] h-[32px]">
+                                <svg width="2" height="13" viewBox="0 0 2 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z" fill="black"/>
+                                    <path d="M2 6.33333C2 6.88562 1.55228 7.33333 1 7.33333C0.447715 7.33333 0 6.88562 0 6.33333C0 5.78105 0.447715 5.33333 1 5.33333C1.55228 5.33333 2 5.78105 2 6.33333Z" fill="black"/>
+                                    <path d="M1 12.6667C1.55228 12.6667 2 12.219 2 11.6667C2 11.1144 1.55228 10.6667 1 10.6667C0.447715 10.6667 0 11.1144 0 11.6667C0 12.219 0.447715 12.6667 1 12.6667Z" fill="black"/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
 
-                    <div class="table-row">
-                        <div class="cell" data-label="PPQ ID">
-                            <div class="ppq-id">PPQ - 2025 -001</div>
-                            <div class="created-date">Created 1/10/2025</div>
+                    <div class="grid grid-cols-[2fr_2.5fr_2fr_1.5fr_2fr_2fr] gap-4 items-center p-5 border-b border-gray-200 transition-colors hover:bg-gray-100 last:border-b-0  xl:grid-cols-[1.5fr_2fr_1.5fr_1fr_1.5fr_1.5fr] lg:grid-cols-1 lg:gap-3 lg:p-4  sm:p-3">
+                        <div class="w-[200px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="PPQ ID">
+                            <div class="font-semibold text-gray-800 mb-1">PPQ - 2025 -001</div>
+                            <div class="text-xs text-gray-500">Created 1/10/2025</div>
                         </div>
-                        <div class="cell" data-label="Solicitation">
-                            <div class="solicitation-id">FA1234567</div>
-                            <div class="solicitation-desc">IT Infrastructure Support Services</div>
+                        <div class="w-[300px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Solicitation">
+                            <div class="font-medium text-gray-800 mb-1">FA1234567</div>
+                            <div class="text-xs text-gray-500">IT Infrastructure Support Services</div>
                         </div>
-                        <div class="cell" data-label="Agency">
+                        <div class="w-[300px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Agency">
                             <div>Cloudlink</div>
                             <div>Technologies</div>
                         </div>
-                        <div class="cell" data-label="Status">
-                            <span class="status-badge status-active">Active</span>
+                        <div class="w-[100px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Status">
+                            <span class="inline-block px-3 py-1 rounded-full text-sm font-medium w-fit status-active bg-[#E7F6EC] text-[#036B26]">Active</span>
                         </div>
-                        <div class="cell" data-label="Responses">
-                            <div class="responses-count">18</div>
-                        </div>
-                        <div class="cell" data-label="Actions">
-                            <button class="view-btn">View Responses</button>
+                        <div class="w-[100px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Actions">
+                            <button class="flex justify-center items-center border border-gray-300 bg-white rounded-lg text-sm font-medium text-gray-700 cursor-pointer transition-all hover:bg-gray-100 hover:border-gray-400 w-[32px] h-[32px]">
+                                <svg width="2" height="13" viewBox="0 0 2 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z" fill="black"/>
+                                    <path d="M2 6.33333C2 6.88562 1.55228 7.33333 1 7.33333C0.447715 7.33333 0 6.88562 0 6.33333C0 5.78105 0.447715 5.33333 1 5.33333C1.55228 5.33333 2 5.78105 2 6.33333Z" fill="black"/>
+                                    <path d="M1 12.6667C1.55228 12.6667 2 12.219 2 11.6667C2 11.1144 1.55228 10.6667 1 10.6667C0.447715 10.6667 0 11.1144 0 11.6667C0 12.219 0.447715 12.6667 1 12.6667Z" fill="black"/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
 
-                    <div class="table-row">
-                        <div class="cell" data-label="PPQ ID">
-                            <div class="ppq-id">PPQ - 2025 -001</div>
-                            <div class="created-date">Created 1/10/2025</div>
+                    <div class="grid grid-cols-[2fr_2.5fr_2fr_1.5fr_2fr_2fr] gap-4 items-center p-5 border-b border-gray-200 transition-colors hover:bg-gray-100 last:border-b-0  xl:grid-cols-[1.5fr_2fr_1.5fr_1fr_1.5fr_1.5fr] lg:grid-cols-1 lg:gap-3 lg:p-4  sm:p-3">
+                        <div class="w-[200px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="PPQ ID">
+                            <div class="font-semibold text-gray-800 mb-1">PPQ - 2025 -001</div>
+                            <div class="text-xs text-gray-500">Created 1/10/2025</div>
                         </div>
-                        <div class="cell" data-label="Solicitation">
-                            <div class="solicitation-id">FA1234567</div>
-                            <div class="solicitation-desc">IT Infrastructure Support Services</div>
+                        <div class="w-[300px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Solicitation">
+                            <div class="font-medium text-gray-800 mb-1">FA1234567</div>
+                            <div class="text-xs text-gray-500">IT Infrastructure Support Services</div>
                         </div>
-                        <div class="cell" data-label="Agency">
+                        <div class="w-[300px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Agency">
                             <div>Cloudlink</div>
                             <div>Technologies</div>
                         </div>
-                        <div class="cell" data-label="Status">
-                            <span class="status-badge status-closed">Closed</span>
+                        <div class="w-[100px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Status">
+                            <span class="inline-block px-3 py-1 rounded-full text-sm font-medium w-fit status-closed bg-[#D0D5DD] text-[#344054]">Closed</span>
                         </div>
-                        <div class="cell" data-label="Responses">
-                            <div class="responses-count">8</div>
-                        </div>
-                        <div class="cell" data-label="Actions">
-                            <button class="view-btn">View Responses</button>
+                        <div class="w-[100px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Actions">
+                            <button class="flex justify-center items-center border border-gray-300 bg-white rounded-lg text-sm font-medium text-gray-700 cursor-pointer transition-all hover:bg-gray-100 hover:border-gray-400 w-[32px] h-[32px]">
+                                <svg width="2" height="13" viewBox="0 0 2 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z" fill="black"/>
+                                    <path d="M2 6.33333C2 6.88562 1.55228 7.33333 1 7.33333C0.447715 7.33333 0 6.88562 0 6.33333C0 5.78105 0.447715 5.33333 1 5.33333C1.55228 5.33333 2 5.78105 2 6.33333Z" fill="black"/>
+                                    <path d="M1 12.6667C1.55228 12.6667 2 12.219 2 11.6667C2 11.1144 1.55228 10.6667 1 10.6667C0.447715 10.6667 0 11.1144 0 11.6667C0 12.219 0.447715 12.6667 1 12.6667Z" fill="black"/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
 
-                    <div class="table-row">
-                        <div class="cell" data-label="PPQ ID">
-                            <div class="ppq-id">PPQ - 2025 -001</div>
-                            <div class="created-date">Created 1/10/2025</div>
+                    <div class="grid grid-cols-[2fr_2.5fr_2fr_1.5fr_2fr_2fr] gap-4 items-center p-5 border-b border-gray-200 transition-colors hover:bg-gray-100 last:border-b-0  xl:grid-cols-[1.5fr_2fr_1.5fr_1fr_1.5fr_1.5fr] lg:grid-cols-1 lg:gap-3 lg:p-4  sm:p-3">
+                        <div class="w-[200px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="PPQ ID">
+                            <div class="font-semibold text-gray-800 mb-1">PPQ - 2025 -001</div>
+                            <div class="text-xs text-gray-500">Created 1/10/2025</div>
                         </div>
-                        <div class="cell" data-label="Solicitation">
-                            <div class="solicitation-id">FA1234567</div>
-                            <div class="solicitation-desc">IT Infrastructure Support Services</div>
+                        <div class="w-[300px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Solicitation">
+                            <div class="font-medium text-gray-800 mb-1">FA1234567</div>
+                            <div class="text-xs text-gray-500">IT Infrastructure Support Services</div>
                         </div>
-                        <div class="cell" data-label="Agency">
+                        <div class="w-[300px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Agency">
                             <div>Cloudlink</div>
                             <div>Technologies</div>
                         </div>
-                        <div class="cell" data-label="Status">
-                            <span class="status-badge status-active">Active</span>
+                        <div class="w-[100px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Status">
+                            <span class="inline-block px-3 py-1 rounded-full text-sm font-medium w-fit status-active bg-[#E7F6EC] text-[#036B26]">Active</span>
                         </div>
-                        <div class="cell" data-label="Responses">
-                            <div class="responses-count">7</div>
-                        </div>
-                        <div class="cell" data-label="Actions">
-                            <button class="view-btn">View Responses</button>
+                        <div class="w-[100px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Actions">
+                            <button class="flex justify-center items-center border border-gray-300 bg-white rounded-lg text-sm font-medium text-gray-700 cursor-pointer transition-all hover:bg-gray-100 hover:border-gray-400 w-[32px] h-[32px]">
+                                <svg width="2" height="13" viewBox="0 0 2 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z" fill="black"/>
+                                    <path d="M2 6.33333C2 6.88562 1.55228 7.33333 1 7.33333C0.447715 7.33333 0 6.88562 0 6.33333C0 5.78105 0.447715 5.33333 1 5.33333C1.55228 5.33333 2 5.78105 2 6.33333Z" fill="black"/>
+                                    <path d="M1 12.6667C1.55228 12.6667 2 12.219 2 11.6667C2 11.1144 1.55228 10.6667 1 10.6667C0.447715 10.6667 0 11.1144 0 11.6667C0 12.219 0.447715 12.6667 1 12.6667Z" fill="black"/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
 
-                    <div class="table-row">
-                        <div class="cell" data-label="PPQ ID">
-                            <div class="ppq-id">PPQ - 2025 -001</div>
-                            <div class="created-date">Created 1/10/2025</div>
+                    <div class="grid grid-cols-[2fr_2.5fr_2fr_1.5fr_2fr_2fr] gap-4 items-center p-5 border-b border-gray-200 transition-colors hover:bg-gray-100 last:border-b-0  xl:grid-cols-[1.5fr_2fr_1.5fr_1fr_1.5fr_1.5fr] lg:grid-cols-1 lg:gap-3 lg:p-4  sm:p-3">
+                        <div class="w-[200px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="PPQ ID">
+                            <div class="font-semibold text-gray-800 mb-1">PPQ - 2025 -001</div>
+                            <div class="text-xs text-gray-500">Created 1/10/2025</div>
                         </div>
-                        <div class="cell" data-label="Solicitation">
-                            <div class="solicitation-id">FA1234567</div>
-                            <div class="solicitation-desc">IT Infrastructure Support Services</div>
+                        <div class="w-[300px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Solicitation">
+                            <div class="font-medium text-gray-800 mb-1">FA1234567</div>
+                            <div class="text-xs text-gray-500">IT Infrastructure Support Services</div>
                         </div>
-                        <div class="cell" data-label="Agency">
+                        <div class="w-[300px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Agency">
                             <div>Cloudlink</div>
                             <div>Technologies</div>
                         </div>
-                        <div class="cell" data-label="Status">
-                            <span class="status-badge status-active">Active</span>
+                        <div class="w-[100px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Status">
+                            <span class="inline-block px-3 py-1 rounded-full text-sm font-medium w-fit status-active bg-[#E7F6EC] text-[#036B26]">Active</span>
                         </div>
-                        <div class="cell" data-label="Responses">
-                            <div class="responses-count">24</div>
-                        </div>
-                        <div class="cell" data-label="Actions">
-                            <button class="view-btn">View Responses</button>
+                        <div class="w-[100px] text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header" data-label="Actions">
+                            <button class="flex justify-center items-center border border-gray-300 bg-white rounded-lg text-sm font-medium text-gray-700 cursor-pointer transition-all hover:bg-gray-100 hover:border-gray-400 w-[32px] h-[32px]">
+                                <svg width="2" height="13" viewBox="0 0 2 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z" fill="black"/>
+                                    <path d="M2 6.33333C2 6.88562 1.55228 7.33333 1 7.33333C0.447715 7.33333 0 6.88562 0 6.33333C0 5.78105 0.447715 5.33333 1 5.33333C1.55228 5.33333 2 5.78105 2 6.33333Z" fill="black"/>
+                                    <path d="M1 12.6667C1.55228 12.6667 2 12.219 2 11.6667C2 11.1144 1.55228 10.6667 1 10.6667C0.447715 10.6667 0 11.1144 0 11.6667C0 12.219 0.447715 12.6667 1 12.6667Z" fill="black"/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
