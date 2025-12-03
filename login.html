@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEIT - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .tech-bg {
+            background: linear-gradient(135deg, #001529 0%, #002140 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .particle {
+            position: absolute;
+            background: rgba(0, 180, 216, 0.6);
+            border-radius: 50%;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .shield-icon {
+            background: linear-gradient(135deg, #0066cc 0%, #003d7a 100%);
+            border-radius: 50%;
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.4);
+        }
+
+        .shield-contractor {
+            background: linear-gradient(135deg, #008ba3 0%, #005f6b 100%);
+            border-radius: 50%;
+            box-shadow: 0 4px 20px rgba(0, 139, 163, 0.4);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex">
+    <div class="w-2/4 tech-bg relative p-8 flex items-center"
+        style="background-image: url(./assest/img/Background.png);">
+
+        <div class="absolute top-8 left-8 z-20">
+            <img src="./assest/img/logo/logo.svg" alt="">
+        </div>
+        <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 text-white 
+                border border-white border-opacity-20 relative z-10 max-w-md">
+            <p class="text-sm leading-relaxed mb-4">
+                The VEIT Tool uses embedded AI/ML to replicate federal evaluation standards
+                using the 0-5 Master Rating Guide. It auto-ranks vendors across weighted
+                performance areas, generates natural-language summaries explaining each score,
+                and highlights areas of risk or concern. Each vendor is reviewed for added
+                value, identified weaknesses, and positioned relative to the most advantageous offeror.
+            </p>
+            <p class="text-sm leading-relaxed">
+                COs can evaluate hundreds of PPQs in minutes with confidence, traceability,
+                and audit-ready justification.
+            </p>
+        </div>
+    </div>
+
+    <!-- Right Side - Login Form -->
+    <div class="w-full bg-gray-50 flex items-center justify-center p-8">
+        <div class="w-full max-w-2xl ">
+            <h2 class="text-3xl font-bold text-[#09090B] text-start mb-5">Welcome to VEIT</h2>
+
+            <!-- Government Access Card -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-[20px] mb-6">
+                <div class="flex flex-col items-start mb-4">
+                    <!-- Shield Icon -->
+                    <div class="items-center justify-center mb-2">
+                        <img src="./assest/img/logo/care-space-member-icon.png" alt="">
+                    </div>
+                    <h3 class="text-[18px] font-semibold text-[#0C111D] mb-1">Government Access</h3>
+                    <p class="text-sm font-normal text-[#475367] text-center">For Contracting Officers, CORs, and
+                        federal evaluation teams</p>
+                </div>
+                <button
+                    class="w-full bg-[#034592] text-white font-medium text-sm py-2 px-6 rounded-lg hover:bg-blue-900 transition-colors">
+                    Login with Password + MFA token
+                </button>
+            </div>
+
+            <!-- Divider -->
+            <div class="relative mb-6">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-[#1212121A]"></div>
+                </div>
+                <div class="relative flex justify-center text-sm">
+                    <span class="px-4 bg-gray-50 text-[#717179] font-normal text-base">or</span>
+                </div>
+            </div>
+
+            <!-- Contractor Access Card -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-[20px]">
+                <div class="flex flex-col items-start mb-4">
+                    <!-- Shield Icon for Contractor -->
+                    <div class="flex items-center justify-center mb-4">
+                        <img src="./assest/img/logo/care-space-member-icon-1.png" alt="">
+                    </div>
+                    <h3 class="text-[18px] font-semibold text-[#0C111D] mb-1">Contractor Access</h3>
+                    <p class="text-sm font-normal text-[#475367] text-center">For vendors and contractors submitting PPQ
+                        responses</p>
+                </div>
+                <button
+                    class="w-full bg-[#034592] text-white font-medium text-sm py-2 px-6 rounded-lg hover:bg-blue-900 transition-colors">
+                    Login with PKI
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

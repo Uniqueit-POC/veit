@@ -66,3 +66,7 @@ input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-clear-button {
     display: none;
 }
+
+.custom-menu-list-hover:hover{
+background-color: #1f2937;
+}
