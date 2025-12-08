@@ -1,72 +1,89 @@
 .swiper-button-prev,
 .swiper-button-next {
-    background     : white;
-    width          : 40px;
-    height         : 40px;
-    border-radius  : 50%;
-    box-shadow     : 0 2px 8px rgba(0, 0, 0, 0.1);
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-    cursor         : pointer;
-    transition     : all 0.3s;
-    border         : none;
-    font-size      : 24px;
-    color          : #333;
-    position       : static;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  position: static;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    background: #f0f0f0;
-    transform : scale(1.05);
+  background: #f0f0f0;
+  transform: scale(1.05);
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-    content: none;
+  content: none;
 }
 
 .swiper-slide:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    transform : translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
 }
 
-.swiper-slide-next+.swiper-slide {
-    opacity: 0.4;
+.swiper-slide-next + .swiper-slide {
+  opacity: 0.4;
 }
 
-  .sidebar-closed {
-            margin-left: -277px;
-        }
-      
+.sidebar-closed {
+  margin-left: -277px;
+}
+
 @media (max-width: 992px) {
-    .cell::before {
-        content       : attr(data-label);
-        font-weight   : 600;
-        font-size     : 12px;
-        color         : #6b7280;
-        margin-bottom : 4px;
-        text-transform: uppercase;
-    }
+  .cell::before {
+    content: attr(data-label);
+    font-weight: 600;
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
 }
 /* Hide default date icon in Chrome, Safari, Edge */
 input[type="date"]::-webkit-calendar-picker-indicator {
-    opacity: 0;
-    display: none;
+  opacity: 0;
+  display: none;
 }
 
 /* Hide default date icon in Firefox */
 input[type="date"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 /* Optional: Remove background icon on some browsers */
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-clear-button {
-    display: none;
+  display: none;
 }
 
-.custom-menu-list-hover:hover{
-background-color: #1f2937;
+.custom-menu-list-hover:hover {
+  background-color: #1f2937;
+}
+
+.score-btn {
+  transition: all 0.3s ease;
+}
+.score-btn:hover {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  transform: scale(1.05);
+}
+.score-btn.active {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.section-header:hover {
+  background-color: #f9fafb;
 }
