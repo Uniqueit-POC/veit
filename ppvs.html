@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assest/css/dev-style.css">
-
+    <style>
+        .active-tab {
+            background-color: white;
+            color: #101928;
+            border: 1px solid #D0D5DD;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 overflow-x-hidden">
@@ -250,24 +257,15 @@
         </div>
     </div>
     <div class="bg-[#101928] min-h-screen p-2">
-        <div id="content"
-            class="ml-[282px] transition-all duration-300 bg-white rounded-[20px] shadow-lg">
+        <div id="content" class="ml-[282px] transition-all duration-300 bg-white rounded-[20px] shadow-lg">
             <div class="p-5 flex justify-between items-center border-b border-[]">
                 <div>
                     <button onclick="toggleSidebar()"
                         class="text-sm bg-[#ffffff] border border-1 border-[#0000001A] shadow-[0_4px_20px_#1018280D] px-4 py-2 rounded-lg text-[#344054] font-medium flex items-center gap-2">
-                        <svg width="20" height="20" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M14.3625 1.61377C12.8858 0.59594 11.0958 0 9.16667 0C4.10406 0 0 4.10406 0 9.16667C0 14.2293 4.10406 18.3333 9.16667 18.3333C14.2293 18.3333 18.3333 14.2293 18.3333 9.16667C18.3333 7.2375 17.7374 5.44753 16.7196 3.97079L15.5166 5.17377C16.2452 6.32998 16.6667 7.6991 16.6667 9.16667C16.6667 13.3088 13.3088 16.6667 9.16667 16.6667C5.02453 16.6667 1.66667 13.3088 1.66667 9.16667C1.66667 5.02453 5.02453 1.66667 9.16667 1.66667C10.6342 1.66667 12.0034 2.08818 13.1596 2.81675L14.3625 1.61377Z"
-                                fill="#344054"></path>
-                            <path
-                                d="M15.8333 0C16.2936 0 16.6667 0.373096 16.6667 0.833333V1.66667H17.5C17.9602 1.66667 18.3333 2.03976 18.3333 2.5C18.3333 2.96024 17.9602 3.33333 17.5 3.33333H16.1785L10.7091 8.80275C11.0251 8.92118 11.25 9.22599 11.25 9.58333C11.25 10.0436 10.8769 10.4167 10.4167 10.4167H8.75C8.28976 10.4167 7.91667 10.0436 7.91667 9.58333V7.91667C7.91667 7.45643 8.28976 7.08333 8.75 7.08333C9.10734 7.08333 9.41215 7.30825 9.53058 7.62424L15 2.15482V0.833333C15 0.373096 15.3731 0 15.8333 0Z"
-                                fill="#344054"></path>
-                            <path
-                                d="M9.16667 3.33333C10.1713 3.33333 11.1165 3.58728 11.9418 4.03448L10.6893 5.28699C10.2177 5.10173 9.70405 5 9.16667 5C6.86548 5 5 6.86548 5 9.16667C5 11.4679 6.86548 13.3333 9.16667 13.3333C11.4679 13.3333 13.3333 11.4679 13.3333 9.16667C13.3333 8.62928 13.2316 8.11566 13.0463 7.64401L14.2989 6.3915C14.7461 7.21678 15 8.16207 15 9.16667C15 12.3883 12.3883 15 9.16667 15C5.94501 15 3.33333 12.3883 3.33333 9.16667C3.33333 5.94501 5.94501 3.33333 9.16667 3.33333Z"
-                                fill="#344054"></path>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.63918 2.5C2.99755 2.5 1.66675 3.8308 1.66675 5.47243V14.1667C1.66675 16.0076 3.15913 17.5 5.00008 17.5H15.0001C16.841 17.5 18.3334 16.0076 18.3334 14.1667V8.5C18.3334 6.65955 16.8427 5.16667 15.0012 5.16667H10.333C10.3188 5.1603 10.3015 5.15222 10.2821 5.1423C10.2418 5.12178 10.2026 5.09927 10.1715 5.07964C10.1573 5.07067 10.1472 5.06377 10.141 5.05943C10.0249 4.95563 9.85548 4.7775 9.62065 4.52691L9.57485 4.47802C9.35714 4.24558 9.103 3.97424 8.84156 3.71696C8.56425 3.44405 8.25367 3.16171 7.94048 2.94299C7.65786 2.7456 7.23637 2.5 6.76205 2.5H4.63918ZM8.4045 5.66654C8.62528 5.90215 8.85875 6.15095 9.04831 6.31802C9.18303 6.43675 9.37501 6.5507 9.52553 6.62738C9.6093 6.67005 9.70671 6.71477 9.80737 6.75086C9.88803 6.77978 10.0505 6.83333 10.2373 6.83333H15.0012C15.9212 6.83333 16.6667 7.57903 16.6667 8.5V14.1667C16.6667 15.0871 15.9206 15.8333 15.0001 15.8333H5.00008C4.07961 15.8333 3.33341 15.0871 3.33341 14.1667V5.47243C3.33341 4.75128 3.91803 4.16667 4.63918 4.16667H6.73682C6.73756 4.16723 6.74008 4.16825 6.74445 4.17003C6.76802 4.17961 6.84536 4.21105 6.98618 4.3094C7.18584 4.44884 7.41892 4.65529 7.67253 4.90487C7.90877 5.13736 8.14115 5.38542 8.36319 5.62245L8.4045 5.66654Z" fill="#344054"/>
                         </svg>
-                        Baselines
+                        PPVs
                     </button>
                 </div>
                 <div class="flex items-center">
@@ -311,362 +309,498 @@
                     </div>
                 </div>
             </div>
-            <div class="container ">
-                <div class="px-6 mt-6 mb-4">
-                    <h2 class="text-2xl font-medium text-[#262527] text-center pt-7">Create Past Performance Volume
-                    </h2>
-                    <p class="text-base font-normal text-[#6A6A70] text-center">Fill out these details to set up your
-                        baseline
-                    </p>
-                </div>
-                <div
-                    class="flex items-start justify-between w-full max-w-3xl mx-auto p-6 border border-gray-200 rounded-lg bg-white mb-4">
-                    <div class="flex flex-col items-center relative flex-1">
-                        <div
-                            class="flex items-center justify-center w-8 h-8 font-bold text-[20px] bg-[#034592] text-[#ffffff] border-2 border-gray-300 rounded-full z-10">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M18.1632 6.28839L8.16325 16.2884C8.07615 16.3758 7.97266 16.4451 7.8587 16.4925C7.74475 16.5398 7.62257 16.5641 7.49918 16.5641C7.3758 16.5641 7.25362 16.5398 7.13967 16.4925C7.02571 16.4451 6.92222 16.3758 6.83512 16.2884L2.46012 11.9134C2.37292 11.8262 2.30374 11.7227 2.25655 11.6087C2.20935 11.4948 2.18506 11.3727 2.18506 11.2493C2.18506 11.126 2.20935 11.0039 2.25655 10.8899C2.30374 10.776 2.37292 10.6725 2.46012 10.5853C2.54733 10.4981 2.65086 10.4289 2.7648 10.3817C2.87874 10.3345 3.00086 10.3102 3.12418 10.3102C3.24751 10.3102 3.36963 10.3345 3.48357 10.3817C3.59751 10.4289 3.70104 10.4981 3.78825 10.5853L7.49997 14.297L16.8367 4.96183C17.0128 4.78571 17.2517 4.68677 17.5007 4.68677C17.7498 4.68677 17.9887 4.78571 18.1648 4.96183C18.3409 5.13795 18.4399 5.37682 18.4399 5.62589C18.4399 5.87497 18.3409 6.11384 18.1648 6.28996L18.1632 6.28839Z"
-                                    fill="white" />
-                            </svg>
-                        </div>
-                        <span class="mt-3 text-[12px] font-semibold text-[#98A2B3] text-center max-w-[130px]">Contract
-                            Information</span>
-                        <div class="absolute top-4 left-[calc(50%+12px)] w-[calc(100%-20px)] h-[1px] bg-gray-300"></div>
-                    </div>
-
-                    <div class="flex flex-col items-center relative flex-1">
-                        <div
-                            class="flex items-center justify-center w-8 h-8 font-bold text-[20px] bg-[#034592] text-[#ffffff] border-2 border-gray-300 rounded-full z-10">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M18.1632 6.28839L8.16325 16.2884C8.07615 16.3758 7.97266 16.4451 7.8587 16.4925C7.74475 16.5398 7.62257 16.5641 7.49918 16.5641C7.3758 16.5641 7.25362 16.5398 7.13967 16.4925C7.02571 16.4451 6.92222 16.3758 6.83512 16.2884L2.46012 11.9134C2.37292 11.8262 2.30374 11.7227 2.25655 11.6087C2.20935 11.4948 2.18506 11.3727 2.18506 11.2493C2.18506 11.126 2.20935 11.0039 2.25655 10.8899C2.30374 10.776 2.37292 10.6725 2.46012 10.5853C2.54733 10.4981 2.65086 10.4289 2.7648 10.3817C2.87874 10.3345 3.00086 10.3102 3.12418 10.3102C3.24751 10.3102 3.36963 10.3345 3.48357 10.3817C3.59751 10.4289 3.70104 10.4981 3.78825 10.5853L7.49997 14.297L16.8367 4.96183C17.0128 4.78571 17.2517 4.68677 17.5007 4.68677C17.7498 4.68677 17.9887 4.78571 18.1648 4.96183C18.3409 5.13795 18.4399 5.37682 18.4399 5.62589C18.4399 5.87497 18.3409 6.11384 18.1648 6.28996L18.1632 6.28839Z"
-                                    fill="white" />
-                            </svg>
-                        </div>
-                        <span class="mt-3 text-[12px] font-semibold text-[#98A2B3] text-center max-w-[130px]">Contract/
-                            Task Order</span>
-                        <div class="absolute top-4 left-[calc(50%+12px)] w-[calc(100%-20px)] h-[1px] bg-gray-300"></div>
-                    </div>
-                    <div class="flex flex-col items-center relative flex-1">
-                        <div
-                            class="flex items-center justify-center w-8 h-8 font-bold text-[20px] bg-[#034592] text-[#ffffff] border-2 border-gray-300 rounded-full z-10">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M18.1632 6.28839L8.16325 16.2884C8.07615 16.3758 7.97266 16.4451 7.8587 16.4925C7.74475 16.5398 7.62257 16.5641 7.49918 16.5641C7.3758 16.5641 7.25362 16.5398 7.13967 16.4925C7.02571 16.4451 6.92222 16.3758 6.83512 16.2884L2.46012 11.9134C2.37292 11.8262 2.30374 11.7227 2.25655 11.6087C2.20935 11.4948 2.18506 11.3727 2.18506 11.2493C2.18506 11.126 2.20935 11.0039 2.25655 10.8899C2.30374 10.776 2.37292 10.6725 2.46012 10.5853C2.54733 10.4981 2.65086 10.4289 2.7648 10.3817C2.87874 10.3345 3.00086 10.3102 3.12418 10.3102C3.24751 10.3102 3.36963 10.3345 3.48357 10.3817C3.59751 10.4289 3.70104 10.4981 3.78825 10.5853L7.49997 14.297L16.8367 4.96183C17.0128 4.78571 17.2517 4.68677 17.5007 4.68677C17.7498 4.68677 17.9887 4.78571 18.1648 4.96183C18.3409 5.13795 18.4399 5.37682 18.4399 5.62589C18.4399 5.87497 18.3409 6.11384 18.1648 6.28996L18.1632 6.28839Z"
-                                    fill="white" />
-                            </svg>
-                        </div>
-                        <span
-                            class="mt-3 text-[12px] font-semibold text-[#98A2B3] text-center max-w-[150px]">Contract/Project
-                            Description (PWS/SOW)</span>
-                        <div class="absolute top-4 left-[calc(50%+12px)] w-[calc(100%-20px)] h-[1px] bg-gray-300"></div>
-                    </div>
-
-                    <div class="flex flex-col items-center relative flex-1">
-                        <div
-                            class="flex items-center justify-center w-8 h-8 font-bold text-[20px] bg-[#034592] text-[#ffffff] border-2 border-gray-300 rounded-full z-10">
-                            4
-                        </div>
-                        <span class="mt-3 text-[12px] font-semibold text-[#101928] text-center max-w-[150px]">Foundation
-                            Contractor Performance</span>
-                    </div>
-                </div>
-
-                <div  class="flex-wrap flex items-center justify-between w-full max-w-3xl mx-auto p-6 border border-[#E4E7EC] rounded-[10px] mb-0">
-                    <div class="bg-[#F7F9FC] rounded-lg w-full p-4">
-                        <h1 class="text-[20px] font-semibold text-[#000000] mb-3">Contractor Information</h1>
-                        <div class="max-w-2xl bg-white rounded-lg shadow-sm">
-                            <div class="grid grid-cols-2 gap-x-8 gap-y-6 p-3">
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">(UEI) Contractor
-                                        Name</label>
-                                    <div class="text-sm text-[#101928] font-normal">FA 1223457-789</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Contractor
-                                        Address</label>
-                                    <div class="text-sm text-[#101928] font-normal">John Stones</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Company Point of
-                                        Contact (Primary)</label>
-                                    <div class="text-sm text-[#101928] font-normal">FA 1223457-789</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Primary POC Phone
-                                        Number</label>
-                                    <div class="text-sm text-[#101928] font-normal">FA 1223457-789</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Primary POC Email
-                                        Address</label>
-                                    <div class="text-sm text-[#101928] font-normal">FA 1223457-789</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Company Point of
-                                        Contact (Alternative)</label>
-                                    <div class="text-sm text-[#101928] font-normal">FA 1223457-789</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Alternative POC
-                                        Phone Number</label>
-                                    <div class="text-sm text-[#101928] font-normal">FA 1223457-789</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Alternative POC
-                                        Email Address</label>
-                                    <div class="text-sm text-[#101928] font-normal">FA 1223457-789</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Work Being
-                                        Performed As</label>
-                                    <div class="text-sm text-[#101928] font-normal">Prime Contractor</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-[#F7F9FC] rounded-lg w-full p-4 mt-6">
-                        <h1 class="text-[20px] font-semibold text-[#000000] mb-3">Contract/Task Order</h1>
-                        <div class="max-w-2xl bg-white rounded-lg shadow-sm">
-                            <div class="grid grid-cols-2 gap-x-8 gap-y-6 p-3">
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Contract
-                                        Number</label>
-                                    <div class="text-sm text-[#101928] font-normal">W91QF0-25-C-0045</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Delivery/Task Order
-                                        Number</label>
-                                    <div class="text-sm text-[#101928] font-normal">DO-0021</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Contract
-                                        Type</label>
-                                    <div class="text-sm text-[#101928] font-normal">Firm Fixed Price</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Contract Sub
-                                        Type</label>
-                                    <div class="text-sm text-[#101928] font-normal">Sub Category</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Contract
-                                        Name/Title</label>
-                                    <div class="text-sm text-[#101928] font-normal">Cloud Infrastructure Support and
-                                        Maintenance Services</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Contract
-                                        Location</label>
-                                    <div class="text-sm text-[#101928] font-normal">Arlington, VA, USA</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Contract
-                                        Agency</label>
-                                    <div class="text-sm text-[#101928] font-normal">Cloudlink Technologies</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Award Date</label>
-                                    <div class="text-sm text-[#101928] font-normal">2021-03-15</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Estimated Contract
-                                        Completion Date</label>
-                                    <div class="text-sm text-[#101928] font-normal">2025-03-14</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Contract Completion
-                                        Date</label>
-                                    <div class="text-sm text-[#101928] font-normal">2025-03-10</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Contract Award
-                                        Amount</label>
-                                    <div class="text-sm text-[#101928] font-normal">$ 12,480,000.00</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Contract Period of
-                                        Performance</label>
-                                    <div class="text-sm text-[#101928] font-normal">4 years 3 months</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Contracting Officer
-                                        Name</label>
-                                    <div class="text-sm text-[#101928] font-normal">Michael Reynolds</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Contracting Officer
-                                        Email Address</label>
-                                    <div class="text-sm text-[#101928] font-normal">michael.reynolds@cloudlinktech.com
-                                    </div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Contracting Officer
-                                        Phone Number</label>
-                                    <div class="text-sm text-[#101928] font-normal">+1 (703) 555-2841</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">Contracting Officer
-                                        Representative (COR) Name</label>
-                                    <div class="text-sm text-[#101928] font-normal">Jennifer L. Carter</div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">COR Email
-                                        Address </label>
-                                    <div class="text-sm text-[#101928] font-normal">jennifer.carter@cloudlinktech.com
-                                    </div>
-                                </div>
-                                <div>
-                                    <label class="block text-[12px] font-normal text-[#475367] mb-1">COR Phone
-                                        Number </label>
-                                    <div class="text-sm text-[#101928] font-normal">+1 (703) 555-2842</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-[#F7F9FC] rounded-lg w-full p-4 mt-6">
-                        <h1 class="text-[20px] font-semibold text-[#000000] mb-3">Contract/Project Description (PWS/SOW)
-                        </h1>
-                        <p class="text-base mb-2 font-medium text-#475367">Brief Description of Statement of Work</p>
-                        <div class="max-w-2xl bg-white rounded-lg shadow-sm p-4">
-                            <p class="text-sm font-normal text-[#344054]">The purpose of this Statement of Work (SOW) is
-                                to define the scope, objectives, deliverables, and performance expectations for the
-                                Digital Services Modernization and Workflow Automation Project to be executed by the
-                                contractor. The project aims to modernize legacy systems, streamline operational
-                                workflows, and enhance digital service delivery capabilities for the client’s internal
-                                and public-facing platforms. <br><br> This effort supports the organization’s broader
-                                strategic goal of improving service accessibility, reducing process inefficiencies, and
-                                strengthening data security across all mission-critical systems. The contractor will
-                                provide end-to-end design, development, and implementation services, including
-                                requirements analysis, user experience (UX) research, systems architecture, API
-                                integration, quality assurance, and post-deployment operational support. The project
-                                will follow an agile methodology, enabling iterative releases, stakeholder visibility,
-                                and frequent cycle improvements.</p>
-                            <p></p>
-                        </div>
-                        <div class="mt-4 w-full max-w-2xl bg-white rounded-lg border-2 border-dashed border-gray-300 p-6">
-
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-5 h-5 rounded-full bg-[#0F973D] flex items-center justify-center shadow-[0_0_15px_rgba(16,185,129,0.45)]">
-                                        <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <h3 class="text-sm font-medium text-[#1D27390">Upload Successful</h3>
-                                        <p class="text-[11px] font-normal text-[#98A2B3]">SOW.pdf | 313 KB · 31 Oct, 2025</p>
-                                    </div>
-
-                                </div>
-                                <button class="flex-shrink-0 p-2 hover:bg-gray-100 rounded-lg transition-colors">
-                                    <svg class="" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.33308 1.1665C6.05597 1.1665 5.80775 1.33792 5.70962 1.59707L5.55656 2.00126C5.22843 1.96847 4.92612 1.93575 4.68139 1.90827C4.49845 1.88773 4.34807 1.87016 4.24361 1.85775L4.12311 1.84329L4.08219 1.83829C3.71679 1.79305 3.38338 2.05251 3.33813 2.41791C3.29288 2.78331 3.55241 3.1162 3.91781 3.16145L3.96234 3.1669L4.08633 3.18178C4.19322 3.19447 4.34647 3.21238 4.53262 3.23328C4.90459 3.27504 5.40946 3.32896 5.93915 3.3773C6.65367 3.44251 7.43689 3.49984 7.99974 3.49984C8.5626 3.49984 9.34581 3.44251 10.0603 3.3773C10.59 3.32896 11.0949 3.27504 11.4669 3.23328C11.653 3.21238 11.8063 3.19447 11.9132 3.18178L12.0371 3.1669L12.0816 3.16146C12.447 3.11621 12.7066 2.78331 12.6614 2.41791C12.6161 2.05251 12.2832 1.79298 11.9178 1.83822L11.8764 1.84329L11.7559 1.85775C11.6514 1.87016 11.501 1.88773 11.3181 1.90827C11.0734 1.93575 10.7711 1.96847 10.4429 2.00126L10.2899 1.59707C10.1917 1.33792 9.94352 1.1665 9.66641 1.1665H6.33308Z" fill="#98A2B3"/>
-                                    <path d="M7.33308 7.83317C7.33308 7.46498 7.0346 7.1665 6.66641 7.1665C6.29822 7.1665 5.99974 7.46498 5.99974 7.83317V11.1665C5.99974 11.5347 6.29822 11.8332 6.66641 11.8332C7.0346 11.8332 7.33308 11.5347 7.33308 11.1665V7.83317Z" fill="#98A2B3"/>
-                                    <path d="M9.33308 7.1665C9.70127 7.1665 9.99974 7.46498 9.99974 7.83317V11.1665C9.99974 11.5347 9.70127 11.8332 9.33308 11.8332C8.96489 11.8332 8.66641 11.5347 8.66641 11.1665V7.83317C8.66641 7.46498 8.96489 7.1665 9.33308 7.1665Z" fill="#98A2B3"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6062 5.36688C12.6666 4.52103 11.9374 3.84293 11.1086 3.9387C10.2606 4.03671 8.95197 4.1665 7.99974 4.1665C7.04752 4.1665 5.7389 4.03671 4.89088 3.9387C4.06213 3.84293 3.33289 4.52103 3.39331 5.36688L3.96447 13.3631C4.00776 13.9692 4.45925 14.4817 5.07884 14.5749C5.74324 14.6748 6.96237 14.8344 8.00051 14.8332C9.0259 14.832 10.25 14.6731 10.9173 14.5741C11.538 14.482 11.9917 13.9692 12.0352 13.3612L12.6062 5.36688ZM11.2617 5.26322C11.264 5.26295 11.2658 5.26311 11.2658 5.26311L11.2675 5.26351C11.269 5.26402 11.2713 5.26524 11.2736 5.26742C11.2751 5.26886 11.2763 5.27062 11.2763 5.27062L11.2762 5.27188L10.7058 13.2575C10.0454 13.3551 8.91343 13.4988 7.99897 13.4998C7.0746 13.5009 5.94966 13.3571 5.29375 13.2589L4.72325 5.27188L4.7232 5.27062C4.7232 5.27062 4.72434 5.26886 4.72586 5.26742C4.72816 5.26524 4.73048 5.26402 4.73196 5.26351L4.73373 5.26311C4.73373 5.26311 4.7355 5.26295 4.73781 5.26322C5.58733 5.3614 6.96337 5.49984 7.99974 5.49984C9.03611 5.49984 10.4122 5.3614 11.2617 5.26322Z" fill="#98A2B3"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex justify-between w-full mt-4">
-                        <button type="button"
-                            class="text-base font-semibold px-6 py-2 border border-[#344054] text-[#344054] rounded-lg bg-[#FFFFFF] hover:bg-gray-100">Save
-                            Draft</button>
-
+            <div class="px-6 py-7">
+                <div class="pb-6 bg-white">
+                    <div class="mb-4 flex items-center justify-between">
                         <div>
-                            <button type="button"
-                                class="me-2 text-base font-semibold px-6 py-2 border border-[#344054] text-[#344054] rounded-lg bg-[#FFFFFF] hover:bg-gray-100">Previous</button>
-                           <button 
-                                onclick="openModal()" 
-                                class="text-base font-semibold px-8 py-2 bg-[#034592] text-white rounded-lg hover:bg-blue-900">
-                                Submit
+                            <h1 class="text-2xl font-bold text-[#262527]">Past Performance Volume</h1>
+                            <p class="text-[#6A6A70] text-[16px] font-normal mt-1">
+                                Create and manage PPV requests for solicitations
+                            </p>
+                        </div>
+                        <div>
+                            <button class="px-4 py-2 bg-[#022063] border border-[#D0D5DD] rounded-lg text-[#FFFFFF] flex items-center space-x-2">
+                                <span>Create PPV Request</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Search + Filter container -->
+                    <div class="flex items-center justify-between  w-full">
+
+                        <!-- Search -->
+                        <div class="relative w-full mr-4 max-w-xs">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M17 17L12.3333 12.3333M13.8889 8.44444C13.8889 11.4513 11.4513 13.8889 8.44444 13.8889C5.43756 13.8889 3 11.4513 3 8.44444C3 5.43756 5.43756 3 8.44444 3C11.4513 3 13.8889 5.43756 13.8889 8.44444Z"
+                                        stroke="#667185" stroke-width="1.67" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <input type="text" placeholder="Search PPVs"
+                                class="w-full pl-10 pr-4 py-2 border border-[#D0D5DD] rounded-lg text-[#667185] font-normal text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+
+                        <!-- Filter Button -->
+                        <div>
+                            <button
+                                class="px-4 py-2 bg-white border border-[#D0D5DD] rounded-lg hover:bg-gray-100 text-[#344054] flex items-center space-x-2">
+                                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M3.3335 4.99984C3.3335 4.5396 3.70659 4.1665 4.16683 4.1665H15.8335C16.2937 4.1665 16.6668 4.5396 16.6668 4.99984C16.6668 5.46007 16.2937 5.83317 15.8335 5.83317H4.16683C3.70659 5.83317 3.3335 5.46007 3.3335 4.99984Z"
+                                        fill="#344054" />
+                                    <path
+                                        d="M5.00016 9.99984C5.00016 9.5396 5.37326 9.1665 5.8335 9.1665H14.1668C14.6271 9.1665 15.0002 9.5396 15.0002 9.99984C15.0002 10.4601 14.6271 10.8332 14.1668 10.8332H5.8335C5.37326 10.8332 5.00016 10.4601 5.00016 9.99984Z"
+                                        fill="#344054" />
+                                    <path
+                                        d="M7.50016 14.1665C7.03993 14.1665 6.66683 14.5396 6.66683 14.9998C6.66683 15.4601 7.03993 15.8332 7.50016 15.8332H12.5002C12.9604 15.8332 13.3335 15.4601 13.3335 14.9998C13.3335 14.5396 12.9604 14.1665 12.5002 14.1665H7.50016Z"
+                                        fill="#344054" />
+                                </svg>
+                                <span>Filter</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
+                <div class="mb-4 flex justify-between items-center">
+                    <h1 class="font-medium text-base text-[#262527]">PPQ Requests</h1>
+                    <a href="#" class="font-normal text-base text-[#6A6A70]">See all</a>
+                </div>
+
+                <div class="shadow-sm bg-white rounded-lg overflow-hidden shadow">
+                    <div
+                        class="grid grid-cols-[2fr_2.5fr_2fr_1.5fr_2fr] bg-[#f9fafb] px-6 py-4 border-b border-[#e5e7eb] gap-4 max-[1200px]:grid-cols-[1.5fr_2fr_1.5fr_1fr_1.5fr_1.5fr] max-[992px]:hidden">
+                        <div
+                            class=" flex items-center justify-between gap-2 text-[12px] font-medium text-[#344054] cursor-pointer select-none">
+                            PPQ ID
+                            <div class="sort-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5891 2.74408C10.4328 2.5878 10.2209 2.5 9.99984 2.5C9.77882 2.5 9.56686 2.5878 9.41058 2.74408L4.41058 7.74408C4.08514 8.06952 4.08514 8.59715 4.41058 8.92259C4.73602 9.24803 5.26366 9.24803 5.58909 8.92259L9.99984 4.51184L14.4106 8.92259C14.736 9.24803 15.2637 9.24803 15.5891 8.92259C15.9145 8.59715 15.9145 8.06952 15.5891 7.74408L10.5891 2.74408Z"
+                                        fill="#667185" />
+                                    <path
+                                        d="M10.5891 18.0893C10.4328 18.2455 10.2209 18.3333 9.99984 18.3333C9.77882 18.3333 9.56686 18.2455 9.41058 18.0893L4.41058 13.0893C4.08514 12.7638 4.08514 12.2362 4.41058 11.9107C4.73602 11.5853 5.26366 11.5853 5.58909 11.9107L9.99984 16.3215L14.4106 11.9107C14.736 11.5853 15.2637 11.5853 15.5891 11.9107C15.9145 12.2362 15.9145 12.7638 15.5891 13.0893L10.5891 18.0893Z"
+                                        fill="#667185" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center justify-between gap-2 text-[12px] font-medium text-[#344054] cursor-pointer select-none">
+                            Solicitation
+                            <div class="sort-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5891 2.74408C10.4328 2.5878 10.2209 2.5 9.99984 2.5C9.77882 2.5 9.56686 2.5878 9.41058 2.74408L4.41058 7.74408C4.08514 8.06952 4.08514 8.59715 4.41058 8.92259C4.73602 9.24803 5.26366 9.24803 5.58909 8.92259L9.99984 4.51184L14.4106 8.92259C14.736 9.24803 15.2637 9.24803 15.5891 8.92259C15.9145 8.59715 15.9145 8.06952 15.5891 7.74408L10.5891 2.74408Z"
+                                        fill="#667185" />
+                                    <path
+                                        d="M10.5891 18.0893C10.4328 18.2455 10.2209 18.3333 9.99984 18.3333C9.77882 18.3333 9.56686 18.2455 9.41058 18.0893L4.41058 13.0893C4.08514 12.7638 4.08514 12.2362 4.41058 11.9107C4.73602 11.5853 5.26366 11.5853 5.58909 11.9107L9.99984 16.3215L14.4106 11.9107C14.736 11.5853 15.2637 11.5853 15.5891 11.9107C15.9145 12.2362 15.9145 12.7638 15.5891 13.0893L10.5891 18.0893Z"
+                                        fill="#667185" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center justify-between gap-2 text-[12px] font-medium text-[#344054] cursor-pointer select-none">
+                            Agency
+                            <div class="sort-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5891 2.74408C10.4328 2.5878 10.2209 2.5 9.99984 2.5C9.77882 2.5 9.56686 2.5878 9.41058 2.74408L4.41058 7.74408C4.08514 8.06952 4.08514 8.59715 4.41058 8.92259C4.73602 9.24803 5.26366 9.24803 5.58909 8.92259L9.99984 4.51184L14.4106 8.92259C14.736 9.24803 15.2637 9.24803 15.5891 8.92259C15.9145 8.59715 15.9145 8.06952 15.5891 7.74408L10.5891 2.74408Z"
+                                        fill="#667185" />
+                                    <path
+                                        d="M10.5891 18.0893C10.4328 18.2455 10.2209 18.3333 9.99984 18.3333C9.77882 18.3333 9.56686 18.2455 9.41058 18.0893L4.41058 13.0893C4.08514 12.7638 4.08514 12.2362 4.41058 11.9107C4.73602 11.5853 5.26366 11.5853 5.58909 11.9107L9.99984 16.3215L14.4106 11.9107C14.736 11.5853 15.2637 11.5853 15.5891 11.9107C15.9145 12.2362 15.9145 12.7638 15.5891 13.0893L10.5891 18.0893Z"
+                                        fill="#667185" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            class=" flex items-center justify-between gap-2 text-[12px] font-medium text-[#344054] cursor-pointer select-none">
+                            Status
+                            <div class="sort-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5891 2.74408C10.4328 2.5878 10.2209 2.5 9.99984 2.5C9.77882 2.5 9.56686 2.5878 9.41058 2.74408L4.41058 7.74408C4.08514 8.06952 4.08514 8.59715 4.41058 8.92259C4.73602 9.24803 5.26366 9.24803 5.58909 8.92259L9.99984 4.51184L14.4106 8.92259C14.736 9.24803 15.2637 9.24803 15.5891 8.92259C15.9145 8.59715 15.9145 8.06952 15.5891 7.74408L10.5891 2.74408Z"
+                                        fill="#667185" />
+                                    <path
+                                        d="M10.5891 18.0893C10.4328 18.2455 10.2209 18.3333 9.99984 18.3333C9.77882 18.3333 9.56686 18.2455 9.41058 18.0893L4.41058 13.0893C4.08514 12.7638 4.08514 12.2362 4.41058 11.9107C4.73602 11.5853 5.26366 11.5853 5.58909 11.9107L9.99984 16.3215L14.4106 11.9107C14.736 11.5853 15.2637 11.5853 15.5891 11.9107C15.9145 12.2362 15.9145 12.7638 15.5891 13.0893L10.5891 18.0893Z"
+                                        fill="#667185" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div
+                            class=" flex items-center justify-between gap-2 text-[12px] font-medium text-[#344054] cursor-pointer select-none">
+                            Actions
+                            <div class="sort-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5891 2.74408C10.4328 2.5878 10.2209 2.5 9.99984 2.5C9.77882 2.5 9.56686 2.5878 9.41058 2.74408L4.41058 7.74408C4.08514 8.06952 4.08514 8.59715 4.41058 8.92259C4.73602 9.24803 5.26366 9.24803 5.58909 8.92259L9.99984 4.51184L14.4106 8.92259C14.736 9.24803 15.2637 9.24803 15.5891 8.92259C15.9145 8.59715 15.9145 8.06952 15.5891 7.74408L10.5891 2.74408Z"
+                                        fill="#667185" />
+                                    <path
+                                        d="M10.5891 18.0893C10.4328 18.2455 10.2209 18.3333 9.99984 18.3333C9.77882 18.3333 9.56686 18.2455 9.41058 18.0893L4.41058 13.0893C4.08514 12.7638 4.08514 12.2362 4.41058 11.9107C4.73602 11.5853 5.26366 11.5853 5.58909 11.9107L9.99984 16.3215L14.4106 11.9107C14.736 11.5853 15.2637 11.5853 15.5891 11.9107C15.9145 12.2362 15.9145 12.7638 15.5891 13.0893L10.5891 18.0893Z"
+                                        fill="#667185" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-[2fr_2.5fr_2fr_1.5fr_2fr] gap-4 items-center p-5 border-b border-gray-200 transition-colors hover:bg-gray-100 last:border-b-0  xl:grid-cols-[1.5fr_2fr_1.5fr_1fr_1.5fr] lg:grid-cols-1 lg:gap-3 lg:p-4  sm:p-3">
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="PPQ ID">
+                            <div class="font-semibold text-gray-800 mb-1">PPQ - 2025 -001</div>
+                            <div class="text-xs text-gray-500">Created 1/10/2025</div>
+                        </div>
+                        <div class="text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Solicitation">
+                            <div class="font-medium text-gray-800 mb-1">FA1234567</div>
+                            <div class="text-xs text-gray-500">IT Infrastructure Support Services</div>
+                        </div>
+                        <div class="text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Agency">
+                            <div>Cloudlink</div>
+                            <div>Technologies</div>
+                        </div>
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Status">
+                            <span
+                                class="inline-block px-3 py-1 rounded-full text-sm font-medium w-fit status-active bg-[#E7F6EC] text-[#036B26]">Active</span>
+                        </div>
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Actions">
+                            <button
+                                class="flex justify-center items-center border border-gray-300 bg-white rounded-lg text-sm font-medium text-gray-700 cursor-pointer transition-all hover:bg-gray-100 hover:border-gray-400 w-[32px] h-[32px]">
+                                <svg width="2" height="13" viewBox="0 0 2 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z"
+                                        fill="black" />
+                                    <path
+                                        d="M2 6.33333C2 6.88562 1.55228 7.33333 1 7.33333C0.447715 7.33333 0 6.88562 0 6.33333C0 5.78105 0.447715 5.33333 1 5.33333C1.55228 5.33333 2 5.78105 2 6.33333Z"
+                                        fill="black" />
+                                    <path
+                                        d="M1 12.6667C1.55228 12.6667 2 12.219 2 11.6667C2 11.1144 1.55228 10.6667 1 10.6667C0.447715 10.6667 0 11.1144 0 11.6667C0 12.219 0.447715 12.6667 1 12.6667Z"
+                                        fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-[2fr_2.5fr_2fr_1.5fr_2fr]     gap-4 items-center p-5 border-b border-gray-200 transition-colors hover:bg-gray-100 last:border-b-0  xl:grid-cols-[1.5fr_2fr_1.5fr_1fr_1.5fr] lg:grid-cols-1 lg:gap-3 lg:p-4  sm:p-3">
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="PPQ ID">
+                            <div class="font-semibold text-gray-800 mb-1">PPQ - 2025 -001</div>
+                            <div class="text-xs text-gray-500">Created 1/10/2025</div>
+                        </div>
+                        <div class="text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Solicitation">
+                            <div class="font-medium text-gray-800 mb-1">FA1234567</div>
+                            <div class="text-xs text-gray-500">IT Infrastructure Support Services</div>
+                        </div>
+                        <div class="text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Agency">
+                            <div>Cloudlink</div>
+                            <div>Technologies</div>
+                        </div>
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Status">
+                            <span
+                                class="inline-block px-3 py-1 rounded-full text-sm font-medium w-fit status-closed bg-[#D0D5DD] text-[#344054]">Closed</span>
+                        </div>
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Actions">
+                            <button
+                                class="flex justify-center items-center border border-gray-300 bg-white rounded-lg text-sm font-medium text-gray-700 cursor-pointer transition-all hover:bg-gray-100 hover:border-gray-400 w-[32px] h-[32px]">
+                                <svg width="2" height="13" viewBox="0 0 2 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z"
+                                        fill="black" />
+                                    <path
+                                        d="M2 6.33333C2 6.88562 1.55228 7.33333 1 7.33333C0.447715 7.33333 0 6.88562 0 6.33333C0 5.78105 0.447715 5.33333 1 5.33333C1.55228 5.33333 2 5.78105 2 6.33333Z"
+                                        fill="black" />
+                                    <path
+                                        d="M1 12.6667C1.55228 12.6667 2 12.219 2 11.6667C2 11.1144 1.55228 10.6667 1 10.6667C0.447715 10.6667 0 11.1144 0 11.6667C0 12.219 0.447715 12.6667 1 12.6667Z"
+                                        fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-[2fr_2.5fr_2fr_1.5fr_2fr]     gap-4 items-center p-5 border-b border-gray-200 transition-colors hover:bg-gray-100 last:border-b-0  xl:grid-cols-[1.5fr_2fr_1.5fr_1fr_1.5fr] lg:grid-cols-1 lg:gap-3 lg:p-4  sm:p-3">
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="PPQ ID">
+                            <div class="font-semibold text-gray-800 mb-1">PPQ - 2025 -001</div>
+                            <div class="text-xs text-gray-500">Created 1/10/2025</div>
+                        </div>
+                        <div class="text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Solicitation">
+                            <div class="font-medium text-gray-800 mb-1">FA1234567</div>
+                            <div class="text-xs text-gray-500">IT Infrastructure Support Services</div>
+                        </div>
+                        <div class="text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Agency">
+                            <div>Cloudlink</div>
+                            <div>Technologies</div>
+                        </div>
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Status">
+                            <span
+                                class="inline-block px-3 py-1 rounded-full text-sm font-medium w-fit status-active bg-[#E7F6EC] text-[#036B26]">Active</span>
+                        </div>
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Actions">
+                            <button
+                                class="flex justify-center items-center border border-gray-300 bg-white rounded-lg text-sm font-medium text-gray-700 cursor-pointer transition-all hover:bg-gray-100 hover:border-gray-400 w-[32px] h-[32px]">
+                                <svg width="2" height="13" viewBox="0 0 2 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z"
+                                        fill="black" />
+                                    <path
+                                        d="M2 6.33333C2 6.88562 1.55228 7.33333 1 7.33333C0.447715 7.33333 0 6.88562 0 6.33333C0 5.78105 0.447715 5.33333 1 5.33333C1.55228 5.33333 2 5.78105 2 6.33333Z"
+                                        fill="black" />
+                                    <path
+                                        d="M1 12.6667C1.55228 12.6667 2 12.219 2 11.6667C2 11.1144 1.55228 10.6667 1 10.6667C0.447715 10.6667 0 11.1144 0 11.6667C0 12.219 0.447715 12.6667 1 12.6667Z"
+                                        fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-[2fr_2.5fr_2fr_1.5fr_2fr]     gap-4 items-center p-5 border-b border-gray-200 transition-colors hover:bg-gray-100 last:border-b-0  xl:grid-cols-[1.5fr_2fr_1.5fr_1fr_1.5fr] lg:grid-cols-1 lg:gap-3 lg:p-4  sm:p-3">
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="PPQ ID">
+                            <div class="font-semibold text-gray-800 mb-1">PPQ - 2025 -001</div>
+                            <div class="text-xs text-gray-500">Created 1/10/2025</div>
+                        </div>
+                        <div class="text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Solicitation">
+                            <div class="font-medium text-gray-800 mb-1">FA1234567</div>
+                            <div class="text-xs text-gray-500">IT Infrastructure Support Services</div>
+                        </div>
+                        <div class="text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Agency">
+                            <div>Cloudlink</div>
+                            <div>Technologies</div>
+                        </div>
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Status">
+                            <span
+                                class="inline-block px-3 py-1 rounded-full text-sm font-medium w-fit status-closed bg-[#D0D5DD] text-[#344054]">Closed</span>
+                        </div>
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Actions">
+                            <button
+                                class="flex justify-center items-center border border-gray-300 bg-white rounded-lg text-sm font-medium text-gray-700 cursor-pointer transition-all hover:bg-gray-100 hover:border-gray-400 w-[32px] h-[32px]">
+                                <svg width="2" height="13" viewBox="0 0 2 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z"
+                                        fill="black" />
+                                    <path
+                                        d="M2 6.33333C2 6.88562 1.55228 7.33333 1 7.33333C0.447715 7.33333 0 6.88562 0 6.33333C0 5.78105 0.447715 5.33333 1 5.33333C1.55228 5.33333 2 5.78105 2 6.33333Z"
+                                        fill="black" />
+                                    <path
+                                        d="M1 12.6667C1.55228 12.6667 2 12.219 2 11.6667C2 11.1144 1.55228 10.6667 1 10.6667C0.447715 10.6667 0 11.1144 0 11.6667C0 12.219 0.447715 12.6667 1 12.6667Z"
+                                        fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-[2fr_2.5fr_2fr_1.5fr_2fr]     gap-4 items-center p-5 border-b border-gray-200 transition-colors hover:bg-gray-100 last:border-b-0  xl:grid-cols-[1.5fr_2fr_1.5fr_1fr_1.5fr] lg:grid-cols-1 lg:gap-3 lg:p-4  sm:p-3">
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="PPQ ID">
+                            <div class="font-semibold text-gray-800 mb-1">PPQ - 2025 -001</div>
+                            <div class="text-xs text-gray-500">Created 1/10/2025</div>
+                        </div>
+                        <div class="text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Solicitation">
+                            <div class="font-medium text-gray-800 mb-1">FA1234567</div>
+                            <div class="text-xs text-gray-500">IT Infrastructure Support Services</div>
+                        </div>
+                        <div class="text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Agency">
+                            <div>Cloudlink</div>
+                            <div>Technologies</div>
+                        </div>
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Status">
+                            <span
+                                class="inline-block px-3 py-1 rounded-full text-sm font-medium w-fit status-active bg-[#E7F6EC] text-[#036B26]">Active</span>
+                        </div>
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Actions">
+                            <button
+                                class="flex justify-center items-center border border-gray-300 bg-white rounded-lg text-sm font-medium text-gray-700 cursor-pointer transition-all hover:bg-gray-100 hover:border-gray-400 w-[32px] h-[32px]">
+                                <svg width="2" height="13" viewBox="0 0 2 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z"
+                                        fill="black" />
+                                    <path
+                                        d="M2 6.33333C2 6.88562 1.55228 7.33333 1 7.33333C0.447715 7.33333 0 6.88562 0 6.33333C0 5.78105 0.447715 5.33333 1 5.33333C1.55228 5.33333 2 5.78105 2 6.33333Z"
+                                        fill="black" />
+                                    <path
+                                        d="M1 12.6667C1.55228 12.6667 2 12.219 2 11.6667C2 11.1144 1.55228 10.6667 1 10.6667C0.447715 10.6667 0 11.1144 0 11.6667C0 12.219 0.447715 12.6667 1 12.6667Z"
+                                        fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-[2fr_2.5fr_2fr_1.5fr_2fr]     gap-4 items-center p-5 border-b border-gray-200 transition-colors hover:bg-gray-100 last:border-b-0  xl:grid-cols-[1.5fr_2fr_1.5fr_1fr_1.5fr] lg:grid-cols-1 lg:gap-3 lg:p-4  sm:p-3">
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="PPQ ID">
+                            <div class="font-semibold text-gray-800 mb-1">PPQ - 2025 -001</div>
+                            <div class="text-xs text-gray-500">Created 1/10/2025</div>
+                        </div>
+                        <div class="text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Solicitation">
+                            <div class="font-medium text-gray-800 mb-1">FA1234567</div>
+                            <div class="text-xs text-gray-500">IT Infrastructure Support Services</div>
+                        </div>
+                        <div class="text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Agency">
+                            <div>Cloudlink</div>
+                            <div>Technologies</div>
+                        </div>
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Status">
+                            <span
+                                class="inline-block px-3 py-1 rounded-full text-sm font-medium w-fit status-active bg-[#E7F6EC] text-[#036B26]">Active</span>
+                        </div>
+                        <div class=" text-sm text-gray-700 cell lg:flex lg:flex-col" data-label="Header"
+                            data-label="Actions">
+                            <button
+                                class="flex justify-center items-center border border-gray-300 bg-white rounded-lg text-sm font-medium text-gray-700 cursor-pointer transition-all hover:bg-gray-100 hover:border-gray-400 w-[32px] h-[32px]">
+                                <svg width="2" height="13" viewBox="0 0 2 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2 1C2 1.55228 1.55228 2 1 2C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0C1.55228 0 2 0.447715 2 1Z"
+                                        fill="black" />
+                                    <path
+                                        d="M2 6.33333C2 6.88562 1.55228 7.33333 1 7.33333C0.447715 7.33333 0 6.88562 0 6.33333C0 5.78105 0.447715 5.33333 1 5.33333C1.55228 5.33333 2 5.78105 2 6.33333Z"
+                                        fill="black" />
+                                    <path
+                                        d="M1 12.6667C1.55228 12.6667 2 12.219 2 11.6667C2 11.1144 1.55228 10.6667 1 10.6667C0.447715 10.6667 0 11.1144 0 11.6667C0 12.219 0.447715 12.6667 1 12.6667Z"
+                                        fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    
-<!-- Modal Backdrop -->
-<div id="baselineModal" 
-     class="fixed inset-0 hidden 
+
+    <!-- Modal Backdrop -->
+    <div id="baselineModal" class="fixed inset-0 hidden 
             bg-[#3E383880] backdrop-blur-[8px]
             flex items-center justify-center">
 
-    <!-- Modal Box -->
-    <div class="bg-white rounded-xl p-6 w-[600px] shadow-lg">
-        <h2 class="text-xl font-semibold mb-2">Ready to Submit Baseline?</h2>
-        <p class="mb-4 text-sm font-normal text-[#667185]">
-            Please ensure all required fields are complete and accurate. Submitting this 
-            baseline will lock the initial contract data for evaluation within VEIT.
-        </p>
+        <!-- Modal Box -->
+        <div class="bg-white rounded-xl p-6 w-[600px] shadow-lg">
+            <h2 class="text-xl font-semibold mb-2">Ready to Submit Baseline?</h2>
+            <p class="mb-4 text-sm font-normal text-[#667185]">
+                Please ensure all required fields are complete and accurate. Submitting this
+                baseline will lock the initial contract data for evaluation within VEIT.
+            </p>
 
-        <div class="flex justify-end space-x-3">
-            <button onclick="closeModal()" 
-                class="px-6 py-2 border text-base font-semibold border-[#344054] text-[#475367] rounded-lg">
-                Cancel
-            </button>
+            <div class="flex justify-end space-x-3">
+                <button onclick="closeModal()"
+                    class="px-6 py-2 border text-base font-semibold border-[#344054] text-[#475367] rounded-lg">
+                    Cancel
+                </button>
 
-            <button type="submit"
-                class="px-6 py-2 bg-[#034592] text-base font-semibold text-white rounded-lg hover:bg-blue-900">
-                Submit
-            </button>
+                <button type="submit"
+                    class="px-6 py-2 bg-[#034592] text-base font-semibold text-white rounded-lg hover:bg-blue-900">
+                    Submit
+                </button>
+            </div>
         </div>
     </div>
-</div>
 
-<script>
-    function openModal() {
-    document.getElementById("baselineModal").classList.remove("hidden");
-}
 
-function closeModal() {
-    document.getElementById("baselineModal").classList.add("hidden");
-}
+    <!-- JS for Tabs -->
+    <script>
+        const tabs = document.querySelectorAll(".tab-btn");
+        const contents = document.querySelectorAll(".tab-content");
 
-</script>
-<script>
-    const fileInput = document.getElementById("fileInput");
-    const uploadBox = document.getElementById("uploadBox");
-    const successBox = document.getElementById("successBox");
-    const fileInfo = document.getElementById("fileInfo");
-    const clearBtn = document.getElementById("clearBtn");
+        tabs.forEach(btn => {
+            btn.addEventListener("click", () => {
 
-    // Open file dialog
-    uploadBox.addEventListener("click", () => fileInput.click());
+                // remove active state
+                tabs.forEach(b => {
+                    b.classList.remove("active-tab");
+                    b.classList.add("inactive-tab");
+                });
 
-    fileInput.addEventListener("change", () => {
-        if (fileInput.files.length) {
-            const file = fileInput.files[0];
+                // hide all contents
+                contents.forEach(c => c.classList.add("hidden"));
 
-            const fileSize = (file.size / 1024).toFixed(0) + " KB";
-            const date = new Date().toLocaleDateString("en-GB", {
-                day: "2-digit", month: "short", year: "numeric"
+                // add active to clicked
+                btn.classList.add("active-tab");
+                btn.classList.remove("inactive-tab");
+
+                // show correct content
+                document.getElementById(btn.dataset.tab).classList.remove("hidden");
             });
-
-            fileInfo.innerHTML = `${file.name} &nbsp;|&nbsp; ${fileSize} &nbsp;|&nbsp; ${date}`;
-
-            uploadBox.classList.add("hidden");
-            successBox.classList.remove("hidden");
+        });
+    </script>
+    <script>
+        function openModal() {
+            document.getElementById("baselineModal").classList.remove("hidden");
         }
-    });
 
-    clearBtn.addEventListener("click", () => {
-        fileInput.value = "";
-        successBox.classList.add("hidden");
-        uploadBox.classList.remove("hidden");
-    });
-</script>
+        function closeModal() {
+            document.getElementById("baselineModal").classList.add("hidden");
+        }
+
+    </script>
+    <script>
+        const fileInput = document.getElementById("fileInput");
+        const uploadBox = document.getElementById("uploadBox");
+        const successBox = document.getElementById("successBox");
+        const fileInfo = document.getElementById("fileInfo");
+        const clearBtn = document.getElementById("clearBtn");
+
+        // Open file dialog
+        uploadBox.addEventListener("click", () => fileInput.click());
+
+        fileInput.addEventListener("change", () => {
+            if (fileInput.files.length) {
+                const file = fileInput.files[0];
+
+                const fileSize = (file.size / 1024).toFixed(0) + " KB";
+                const date = new Date().toLocaleDateString("en-GB", {
+                    day: "2-digit", month: "short", year: "numeric"
+                });
+
+                fileInfo.innerHTML = `${file.name} &nbsp;|&nbsp; ${fileSize} &nbsp;|&nbsp; ${date}`;
+
+                uploadBox.classList.add("hidden");
+                successBox.classList.remove("hidden");
+            }
+        });
+
+        clearBtn.addEventListener("click", () => {
+            fileInput.value = "";
+            successBox.classList.add("hidden");
+            uploadBox.classList.remove("hidden");
+        });
+    </script>
 
     <!-- JS -->
     <script>
